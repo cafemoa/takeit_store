@@ -20,6 +20,10 @@
         "source": "/Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/res/layout/abc_list_menu_item_layout.xml"
     },
     {
+        "merged": "/Users/parkjaemin/Desktop/CafeMoa-store/app/build/intermediates/res/merged/debug/layout/item_order_list.xml",
+        "source": "/Users/parkjaemin/Desktop/CafeMoa-store/app/src/main/res/layout/item_order_list.xml"
+    },
+    {
         "merged": "/Users/parkjaemin/Desktop/CafeMoa-store/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
         "source": "/Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/res/layout/abc_action_menu_layout.xml"
     },
@@ -38,6 +42,10 @@
     {
         "merged": "/Users/parkjaemin/Desktop/CafeMoa-store/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
         "source": "/Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/res/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "/Users/parkjaemin/Desktop/CafeMoa-store/app/build/intermediates/res/merged/debug/layout/activity_order.xml",
+        "source": "/Users/parkjaemin/Desktop/CafeMoa-store/app/src/main/res/layout/activity_order.xml"
     },
     {
         "merged": "/Users/parkjaemin/Desktop/CafeMoa-store/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",

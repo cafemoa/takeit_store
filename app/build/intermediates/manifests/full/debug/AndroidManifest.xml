@@ -20,6 +20,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity android:name="mkworld29.mobile.com.cafemoa_store.MainActivity" >
+        </activity>
+        <activity android:name="mkworld29.mobile.com.cafemoa_store.OrderActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

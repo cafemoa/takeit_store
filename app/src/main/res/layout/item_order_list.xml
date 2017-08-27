@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_menu_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#0c0c0c"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="아메리카노"/>
+
+
+    <TextView
+        android:id="@+id/tv_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#0c0c0c"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="M"/>
+
+
+    <TextView
+        android:id="@+id/tv_shots"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#0c0c0c"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="2샷"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_is_cold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#0c0c0c"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Cold"/>
+
+
+    <TextView
+        android:id="@+id/tv_is_whipping"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#0c0c0c"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Whipping O"/>
+
+
+
+</LinearLayout>
