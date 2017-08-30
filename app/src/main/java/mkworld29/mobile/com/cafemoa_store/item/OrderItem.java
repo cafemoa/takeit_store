@@ -5,39 +5,39 @@ package mkworld29.mobile.com.cafemoa_store.item;
  */
 
 public class OrderItem {
-    private int size, shots;
-    private boolean is_whipping, is_cold;
+    private String size, shots;
+    private String is_whipping, is_cold;
     private String menu_name;
 
-    public int getSize() {
+    public String getSize() {
         return size;
     }
 
-    public void setSize(int size) {
+    public void setSize(String size) {
         this.size = size;
     }
 
-    public int getShots() {
+    public String getShots() {
         return shots;
     }
 
-    public void setShots(int shots) {
+    public void setShots(String shots) {
         this.shots = shots;
     }
 
-    public boolean is_whipping() {
+    public String is_whipping() {
         return is_whipping;
     }
 
-    public void setIs_whipping(boolean is_whipping) {
+    public void setIs_whipping(String is_whipping) {
         this.is_whipping = is_whipping;
     }
 
-    public boolean is_cold() {
+    public String is_cold() {
         return is_cold;
     }
 
-    public void setIs_cold(boolean is_cold) {
+    public void setIs_cold(String is_cold) {
         this.is_cold = is_cold;
     }
 

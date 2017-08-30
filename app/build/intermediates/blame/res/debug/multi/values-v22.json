@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/parkjaemin/Desktop/CafeMoa-store/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml",
+        "outputFile": "C:\\Users\\ABCla\\takeit_store\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v22\\values-v22.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 125
                 },
                 "from": {
-                    "file": "/Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/res/values-v22/values-v22.xml",
+                    "file": "C:\\Users\\ABCla\\.android\\build-cache\\d6530cbb2e6f11a662e1ad0bb7c46a81f166cff7\\output\\res\\values-v22\\values-v22.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 212
                 },
                 "from": {
-                    "file": "/Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/res/values-v22/values-v22.xml",
+                    "file": "C:\\Users\\ABCla\\.android\\build-cache\\d6530cbb2e6f11a662e1ad0bb7c46a81f166cff7\\output\\res\\values-v22\\values-v22.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -50,7 +50,7 @@
                     "endOffset": 548
                 },
                 "from": {
-                    "file": "/Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/res/values-v22/values-v22.xml",
+                    "file": "C:\\Users\\ABCla\\.android\\build-cache\\d6530cbb2e6f11a662e1ad0bb7c46a81f166cff7\\output\\res\\values-v22\\values-v22.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -71,7 +71,7 @@
                     "endOffset": 896
                 },
                 "from": {
-                    "file": "/Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/res/values-v22/values-v22.xml",
+                    "file": "C:\\Users\\ABCla\\.android\\build-cache\\d6530cbb2e6f11a662e1ad0bb7c46a81f166cff7\\output\\res\\values-v22\\values-v22.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
