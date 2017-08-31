@@ -1,6 +1,7 @@
 package mkworld29.mobile.com.cafemoa_store.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,11 +9,20 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import mkworld29.mobile.com.cafemoa_store.R;
 import mkworld29.mobile.com.cafemoa_store.item.OrderItem;
+import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitConnection;
+import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitInstance;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
 
 /**
  * Created by parkjaemin on 2017. 8. 27..
@@ -20,7 +30,6 @@ import mkworld29.mobile.com.cafemoa_store.item.OrderItem;
 
 public class OrderListAdapter extends BaseAdapter{
     private ArrayList<OrderItem> listViewItemList = new ArrayList<OrderItem>() ;
-
     // ListViewAdapter의 생성자
     public OrderListAdapter() {
 
@@ -60,11 +69,28 @@ public class OrderListAdapter extends BaseAdapter{
         tv_is_whipping.setText(String.valueOf(listViewItem.is_whipping()));
         tv_is_cold.setText(String.valueOf(listViewItem.is_cold()));
         tv_shots.setText(String.valueOf(listViewItem.getShots())+"샷");
+        final int pk=listViewItem.getPk();
 
         btn_commit.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                // 서버 처리
+            public void onClick(final View view) {
+                Retrofit retrofit = RetrofitInstance.getInstance(view.getContext());
+                RetrofitConnection.complete_order service = retrofit.create(RetrofitConnection.complete_order.class);
+
+
+                final Call<ResponseBody> repos = service.repoContributors(pk);
+                repos.enqueue(new Callback<ResponseBody>() {
+                    @Override
+                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+
+                        Toast.makeText(view.getContext(), "음료가 준비가 완료되었습니다.", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onFailure(Call<ResponseBody> call, Throwable t) {
+                        Log.d("TAG", t.getLocalizedMessage());
+                    }
+                });
             }
         });
 
@@ -84,7 +110,7 @@ public class OrderListAdapter extends BaseAdapter{
     }
 
     // 아이템 데이터 추가를 위한 함수. 개발자가 원하는대로 작성 가능.
-    public void addItem(String menu_name, String sizes, String shots, String is_whipping, String is_cold) {
+    public void addItem(String menu_name, String sizes, String shots, String is_whipping, String is_cold,int pk) {
         OrderItem item = new OrderItem();
 
         item.setMenu_name(menu_name);
@@ -92,6 +118,7 @@ public class OrderListAdapter extends BaseAdapter{
         item.setShots(shots);
         item.setIs_whipping(is_whipping);
         item.setIs_cold(is_cold);
+        item.setPk(pk);
 
         listViewItemList.add(item);
     }

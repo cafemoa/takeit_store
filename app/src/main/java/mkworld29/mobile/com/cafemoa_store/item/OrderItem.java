@@ -8,6 +8,15 @@ public class OrderItem {
     private String size, shots;
     private String is_whipping, is_cold;
     private String menu_name;
+    private int pk;
+
+    public int getPk() {
+        return pk;
+    }
+
+    public void setPk(int pk) {
+        this.pk = pk;
+    }
 
     public String getSize() {
         return size;
