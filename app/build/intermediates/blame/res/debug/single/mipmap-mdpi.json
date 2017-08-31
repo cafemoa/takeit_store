@@ -1,10 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\ABCla\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
-        "source": "C:\\Users\\ABCla\\takeit_store\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "/Users/parkjaemin/Desktop/CafeMoa-store/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher_round.png",
+        "source": "/Users/parkjaemin/Desktop/CafeMoa-store/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\ABCla\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher_round.png",
-        "source": "C:\\Users\\ABCla\\takeit_store\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "/Users/parkjaemin/Desktop/CafeMoa-store/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
+        "source": "/Users/parkjaemin/Desktop/CafeMoa-store/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     }
 ]

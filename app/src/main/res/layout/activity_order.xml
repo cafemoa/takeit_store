@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_layout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="mkworld29.mobile.com.cafemoa_store.OrderActivity"
-    android:orientation="vertical">
+    tools:context="mkworld29.mobile.com.cafemoa_store.OrderActivity">
 
     <ListView
         android:id="@+id/lv_order_list"
@@ -15,4 +15,4 @@
 
     </ListView>
 
-</LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

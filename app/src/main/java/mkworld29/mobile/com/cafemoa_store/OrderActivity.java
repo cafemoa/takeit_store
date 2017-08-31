@@ -1,10 +1,9 @@
 package mkworld29.mobile.com.cafemoa_store;
 
-import android.content.Intent;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -20,7 +19,7 @@ import retrofit2.Retrofit;
 
 import java.util.List;
 
-public class OrderActivity extends AppCompatActivity {
+public class OrderActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener{
 
     private ListView lv_order_list;
     private Retrofit retrofit;
@@ -30,6 +29,10 @@ public class OrderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
         retrofit= RetrofitInstance.getInstance(getApplicationContext());
+
+        SwipeRefreshLayout mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_layout);
+        mSwipeRefreshLayout.setOnRefreshListener(this);
+
 
         lv_order_list = (ListView) findViewById(R.id.lv_order_list);
 
@@ -70,5 +73,10 @@ public class OrderActivity extends AppCompatActivity {
                 Log.d("TAG", t.getLocalizedMessage());
             }
         });
+    }
+
+    @Override
+    public void onRefresh() {
+        // 새로고침 소스
     }
 }
