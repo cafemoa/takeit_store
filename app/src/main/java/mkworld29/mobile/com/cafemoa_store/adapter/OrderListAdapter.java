@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -48,6 +49,7 @@ public class OrderListAdapter extends BaseAdapter{
         TextView tv_is_whipping = (TextView) convertView.findViewById(R.id.tv_is_whipping) ;
         TextView tv_is_cold = (TextView) convertView.findViewById(R.id.tv_is_cold) ;
         TextView tv_shots = (TextView) convertView.findViewById(R.id.tv_shots) ;
+        Button   btn_commit = (Button) convertView.findViewById(R.id.btn_commit);
 
         // Data Set(listViewItemList)에서 position에 위치한 데이터 참조 획득
         OrderItem listViewItem = listViewItemList.get(position);
@@ -58,6 +60,13 @@ public class OrderListAdapter extends BaseAdapter{
         tv_is_whipping.setText(String.valueOf(listViewItem.is_whipping()));
         tv_is_cold.setText(String.valueOf(listViewItem.is_cold()));
         tv_shots.setText(String.valueOf(listViewItem.getShots())+"샷");
+
+        btn_commit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // 서버 처리
+            }
+        });
 
         return convertView;
     }

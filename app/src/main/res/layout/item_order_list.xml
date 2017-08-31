@@ -59,6 +59,10 @@
         android:gravity="center"
         android:text="Whipping O"/>
 
-
+    <Button
+        android:id="@+id/btn_commit"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:text="확인"/>
 
 </LinearLayout>
