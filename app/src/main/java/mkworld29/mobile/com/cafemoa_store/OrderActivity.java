@@ -23,18 +23,27 @@ public class OrderActivity extends AppCompatActivity implements SwipeRefreshLayo
 
     private ListView lv_order_list;
     private Retrofit retrofit;
-
+    private OrderListAdapter adapter;
+    private SwipeRefreshLayout mSwipeRefreshLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
         retrofit= RetrofitInstance.getInstance(getApplicationContext());
 
-        SwipeRefreshLayout mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_layout);
+        mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_layout);
         mSwipeRefreshLayout.setOnRefreshListener(this);
 
 
         lv_order_list = (ListView) findViewById(R.id.lv_order_list);
+
+        onRefresh();
+    }
+
+    @Override
+    public void onRefresh() {
+        // 새로고침 소스
+        adapter = new OrderListAdapter();
 
         RetrofitConnection.get_orders service = retrofit.create(RetrofitConnection.get_orders.class);
 
@@ -44,7 +53,6 @@ public class OrderActivity extends AppCompatActivity implements SwipeRefreshLayo
             public void onResponse(Call<List<Order>> call, Response<List<Order>> response) {
                 if (response.code() == 200) {
 
-                    OrderListAdapter adapter = new OrderListAdapter();
                     List<Order> orders= response.body();
                     int orders_num=orders.size();
                     for(int i=0; i<orders_num; i++){
@@ -73,10 +81,8 @@ public class OrderActivity extends AppCompatActivity implements SwipeRefreshLayo
                 Log.d("TAG", t.getLocalizedMessage());
             }
         });
+        mSwipeRefreshLayout.setRefreshing(false);
     }
 
-    @Override
-    public void onRefresh() {
-        // 새로고침 소스
-    }
+
 }
