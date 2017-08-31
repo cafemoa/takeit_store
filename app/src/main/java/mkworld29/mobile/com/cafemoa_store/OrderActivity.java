@@ -55,10 +55,10 @@ public class OrderActivity extends AppCompatActivity implements SwipeRefreshLayo
 
                     List<Order> orders= response.body();
                     int orders_num=orders.size();
-                    for(int i=0; i<orders_num; i++){
-                        Order order=orders.get(i);
-                        List<Option> options=order.options;
-                        int option_num=options.size();
+                        for(int i=0; i<orders_num; i++){
+                            Order order=orders.get(i);
+                            List<Option> options=order.options;
+                            int option_num=options.size();
                         for(int j=0; j<option_num; j++){
                             Option option=options.get(j);
                             String order_num="주문번호 : "+order.order_num;

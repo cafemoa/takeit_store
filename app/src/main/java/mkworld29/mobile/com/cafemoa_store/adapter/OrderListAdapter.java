@@ -65,6 +65,7 @@ public class OrderListAdapter extends BaseAdapter{
             @Override
             public void onClick(View view) {
                 // 서버 처리
+
             }
         });
 
