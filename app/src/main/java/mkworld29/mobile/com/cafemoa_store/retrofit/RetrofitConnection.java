@@ -58,6 +58,16 @@ public class RetrofitConnection {
         );
     }
 
+    public interface fcm_register{
+        @FormUrlEncoded
+        @POST("fcm/devices/")
+        Call<ResponseBody> repoContributors(
+                @Field("dev_id") String device_id,
+                @Field("reg_id") String token,
+                @Field("is_active") boolean is_active
+        );
+    }
+
     public interface get_orders{
         @GET("get_orders/")
         Call<List<Order>> repoContributors();
