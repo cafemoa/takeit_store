@@ -44,12 +44,12 @@
         "source": "C:\\Users\\ABCla\\.android\\build-cache\\d6530cbb2e6f11a662e1ad0bb7c46a81f166cff7\\output\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
-        "merged": "C:\\Users\\ABCla\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_star_black_48dp.png",
-        "source": "C:\\Users\\ABCla\\.android\\build-cache\\d6530cbb2e6f11a662e1ad0bb7c46a81f166cff7\\output\\res\\drawable-hdpi-v4\\abc_ic_star_black_48dp.png"
-    },
-    {
         "merged": "C:\\Users\\ABCla\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
         "source": "C:\\Users\\ABCla\\.android\\build-cache\\d6530cbb2e6f11a662e1ad0bb7c46a81f166cff7\\output\\res\\drawable-hdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\ABCla\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_star_black_48dp.png",
+        "source": "C:\\Users\\ABCla\\.android\\build-cache\\d6530cbb2e6f11a662e1ad0bb7c46a81f166cff7\\output\\res\\drawable-hdpi-v4\\abc_ic_star_black_48dp.png"
     },
     {
         "merged": "C:\\Users\\ABCla\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
