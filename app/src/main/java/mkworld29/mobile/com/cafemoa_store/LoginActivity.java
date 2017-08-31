@@ -76,8 +76,7 @@ public class LoginActivity extends AppCompatActivity {
         repos.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                Toast.makeText(getApplicationContext(), fcm_token+"/"+deviceID, Toast.LENGTH_SHORT).show();
-                Intent i=new Intent(LoginActivity.this, MainActivity.class);
+                Intent i=new Intent(LoginActivity.this, OrderActivity.class);
                 startActivity(i);
                 finish();
             }

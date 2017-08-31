@@ -72,4 +72,11 @@ public class RetrofitConnection {
         @GET("get_orders/")
         Call<List<Order>> repoContributors();
     }
+
+    public interface complete_order{
+        @POST("complete_order/{PK}")
+        Call<ResponseBody> repoContributors(
+                @Path("PK") int pk
+        );
+    }
 }
