@@ -8,6 +8,8 @@
         android:minSdkVersion="19"
         android:targetSdkVersion="25" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <meta-data
         android:name="android.support.VERSION"
         android:value="25.3.1" />
@@ -22,6 +24,8 @@
         <activity android:name="mkworld29.mobile.com.cafemoa_store.MainActivity" >
         </activity>
         <activity android:name="mkworld29.mobile.com.cafemoa_store.OrderActivity" >
+        </activity>
+        <activity android:name="mkworld29.mobile.com.cafemoa_store.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

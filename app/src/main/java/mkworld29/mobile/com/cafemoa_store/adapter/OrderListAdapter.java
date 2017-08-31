@@ -75,7 +75,7 @@ public class OrderListAdapter extends BaseAdapter{
     }
 
     // 아이템 데이터 추가를 위한 함수. 개발자가 원하는대로 작성 가능.
-    public void addItem(String menu_name, int sizes, int shots, boolean is_whipping, boolean is_cold) {
+    public void addItem(String menu_name, String sizes, String shots, String is_whipping, String is_cold) {
         OrderItem item = new OrderItem();
 
         item.setMenu_name(menu_name);
