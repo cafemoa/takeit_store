@@ -16,15 +16,15 @@ ADDED from /Users/parkjaemin/Desktop/CafeMoa-store/app/src/main/AndroidManifest.
 application
 ADDED from /Users/parkjaemin/Desktop/CafeMoa-store/app/src/main/AndroidManifest.xml:5:5-22:19
 MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/parkjaemin/.android/build-cache/f2edd761d2ced687c0fee68ebbd18c1dcb28a0cf/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/parkjaemin/.android/build-cache/3374be14ad36846a04730ff5d2762e5036ea93bf/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/parkjaemin/.android/build-cache/e7eb4fc4d7cf7ee3a841b0b9d5dc44f7c4a5839a/output/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:support-v4:25.3.1] /Users/parkjaemin/.android/build-cache/55ca5767c4302cdaca3753f2b62f9c19d20f9718/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-fragment:25.3.1] /Users/parkjaemin/.android/build-cache/79e6d609856f442604318024d098303aa8f8daa3/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-media-compat:25.3.1] /Users/parkjaemin/.android/build-cache/a76e030fbc0d181e67d3eba3a04b0dc8a1732c5e/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-core-ui:25.3.1] /Users/parkjaemin/.android/build-cache/7e1e0b0e19b9c31cfc039fb7fc7089e973704065/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-core-utils:25.3.1] /Users/parkjaemin/.android/build-cache/5a564507efeafa440cd5c1f2e4bd9e5825f3a50f/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/parkjaemin/.android/build-cache/f2edd761d2ced687c0fee68ebbd18c1dcb28a0cf/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/parkjaemin/.android/build-cache/3374be14ad36846a04730ff5d2762e5036ea93bf/output/AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:support-compat:25.3.1] /Users/parkjaemin/.android/build-cache/00f3c3f5332f2f6db8eeab0b49a3c2532425d78a/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/parkjaemin/.android/build-cache/e7eb4fc4d7cf7ee3a841b0b9d5dc44f7c4a5839a/output/AndroidManifest.xml:9:5-20
 	android:label
 		ADDED from /Users/parkjaemin/Desktop/CafeMoa-store/app/src/main/AndroidManifest.xml:8:9-41
 	android:supportsRtl
@@ -58,15 +58,15 @@ ADDED from /Users/parkjaemin/Desktop/CafeMoa-store/app/src/main/AndroidManifest.
 uses-sdk
 INJECTED from /Users/parkjaemin/Desktop/CafeMoa-store/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/parkjaemin/.android/build-cache/f2edd761d2ced687c0fee68ebbd18c1dcb28a0cf/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/parkjaemin/.android/build-cache/3374be14ad36846a04730ff5d2762e5036ea93bf/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/parkjaemin/.android/build-cache/e7eb4fc4d7cf7ee3a841b0b9d5dc44f7c4a5839a/output/AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:support-v4:25.3.1] /Users/parkjaemin/.android/build-cache/55ca5767c4302cdaca3753f2b62f9c19d20f9718/output/AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-fragment:25.3.1] /Users/parkjaemin/.android/build-cache/79e6d609856f442604318024d098303aa8f8daa3/output/AndroidManifest.xml:21:5-23:60
 MERGED from [com.android.support:support-media-compat:25.3.1] /Users/parkjaemin/.android/build-cache/a76e030fbc0d181e67d3eba3a04b0dc8a1732c5e/output/AndroidManifest.xml:21:5-23:63
 MERGED from [com.android.support:support-core-ui:25.3.1] /Users/parkjaemin/.android/build-cache/7e1e0b0e19b9c31cfc039fb7fc7089e973704065/output/AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-utils:25.3.1] /Users/parkjaemin/.android/build-cache/5a564507efeafa440cd5c1f2e4bd9e5825f3a50f/output/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/parkjaemin/.android/build-cache/f2edd761d2ced687c0fee68ebbd18c1dcb28a0cf/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/parkjaemin/.android/build-cache/3374be14ad36846a04730ff5d2762e5036ea93bf/output/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-compat:25.3.1] /Users/parkjaemin/.android/build-cache/00f3c3f5332f2f6db8eeab0b49a3c2532425d78a/output/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/parkjaemin/.android/build-cache/e7eb4fc4d7cf7ee3a841b0b9d5dc44f7c4a5839a/output/AndroidManifest.xml:5:5-7:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
@@ -77,13 +77,13 @@ MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/park
 		INJECTED from /Users/parkjaemin/Desktop/CafeMoa-store/app/src/main/AndroidManifest.xml
 meta-data#android.support.VERSION
 ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/parkjaemin/.android/build-cache/f2edd761d2ced687c0fee68ebbd18c1dcb28a0cf/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/parkjaemin/.android/build-cache/3374be14ad36846a04730ff5d2762e5036ea93bf/output/AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:support-v4:25.3.1] /Users/parkjaemin/.android/build-cache/55ca5767c4302cdaca3753f2b62f9c19d20f9718/output/AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-fragment:25.3.1] /Users/parkjaemin/.android/build-cache/79e6d609856f442604318024d098303aa8f8daa3/output/AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-media-compat:25.3.1] /Users/parkjaemin/.android/build-cache/a76e030fbc0d181e67d3eba3a04b0dc8a1732c5e/output/AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-core-ui:25.3.1] /Users/parkjaemin/.android/build-cache/7e1e0b0e19b9c31cfc039fb7fc7089e973704065/output/AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-core-utils:25.3.1] /Users/parkjaemin/.android/build-cache/5a564507efeafa440cd5c1f2e4bd9e5825f3a50f/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/parkjaemin/.android/build-cache/f2edd761d2ced687c0fee68ebbd18c1dcb28a0cf/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/parkjaemin/.android/build-cache/3374be14ad36846a04730ff5d2762e5036ea93bf/output/AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:support-compat:25.3.1] /Users/parkjaemin/.android/build-cache/00f3c3f5332f2f6db8eeab0b49a3c2532425d78a/output/AndroidManifest.xml:25:5-27:34
 	android:value
 		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/AndroidManifest.xml:27:9-31
