@@ -67,9 +67,10 @@ public class MyFirebaseMessagingService extends com.google.firebase.messaging.Fi
                 new Intent(this, MainActivity.class), 0);
 
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this).setSmallIcon(R.mipmap.ic_launcher)
-                .setContentTitle("FCM")
+                .setContentTitle("Take It")
                 .setContentText(msg)
                 .setAutoCancel(true)
+                .setContentIntent(contentIntent)
                 .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
                 .setVibrate(new long[]{1, 1000});
 
