@@ -13,16 +13,13 @@ public class CoffeOption {
     private boolean is_whipping;
     private int pk;
 
-    public CoffeOption(int shots, int size, int amounts, boolean is_cold, boolean is_whipping, int pk)
+    public CoffeOption(int shots, int size, boolean is_cold, boolean is_whipping)
     {
 
         this.shots = shots;
         this.size = size;
         this.is_cold = is_cold;
-        this.amounts = amounts;
         this.is_whipping = is_whipping;
-        this.pk=pk;
-
     }
 
     public int getAmounts() {

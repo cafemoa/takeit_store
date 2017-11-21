@@ -44,6 +44,7 @@ public class RetrofitConnection {
         public int pk;
         public String order_time;
         public int order_num;
+        public int get_time;
         public int payment_type;
         public int orderer_name;
         public List<Option> options;

@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/build/intermediates/res/merged/debug/layout-v16/notification_template_custom_big.xml",
-        "source": "/Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/res/layout-v16/notification_template_custom_big.xml"
+        "merged": "C:\\Users\\ABCla\\Desktop\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\layout-v16\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\ABCla\\.android\\build-cache\\d6530cbb2e6f11a662e1ad0bb7c46a81f166cff7\\output\\res\\layout-v16\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "C:\\Users\\parkjaemin\\Desktop\\TakeIt\\Takeit_store\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\layout-v16\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\parkjaemin\\.android\\build-cache\\eb5d92a4bc48ec44b5006734f4ac3695214efdd7\\output\\res\\layout-v16\\notification_template_custom_big.xml"
     }
 ]

@@ -2,6 +2,7 @@ package mkworld29.mobile.com.cafemoa_store;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,12 +15,23 @@ import android.view.MenuItem;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.List;
+
+import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitConnection;
+import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitInstance;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private ListView lv_order = null;
     OrderListAdapter adapter = null;
+    Retrofit retrofit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,13 +70,44 @@ public class MainActivity extends AppCompatActivity
 
         adapter = new OrderListAdapter();
 
-        CoffeOption option = new CoffeOption(2,3,3,true,true,1);
+        retrofit= RetrofitInstance.getInstance(getApplicationContext());
+        RetrofitConnection.get_orders service = retrofit.create(RetrofitConnection.get_orders.class);
 
-        for(int i=0;i<5;i++) {
-            adapter.addItem(new OrderListItem("아메리카노", 3, 1, option));
-        }
-        lv_order.setAdapter(adapter);
+        final Call<List<RetrofitConnection.Order>> repos = service.repoContributors();
+        repos.enqueue(new Callback<List<RetrofitConnection.Order>>() {
+            @Override
+            public void onResponse(Call<List<RetrofitConnection.Order>> call, Response<List<RetrofitConnection.Order>> response) {
+                if (response.code() == 200) {
 
+                    List<RetrofitConnection.Order> orders= response.body();
+                    int orders_num=orders.size();
+
+                    for(int i=0; i<orders_num; i++){
+                        RetrofitConnection.Order order=orders.get(i);
+
+                        List<RetrofitConnection.Option> options=order.options;
+                        int option_num=options.size();
+
+                        for(int j=0; j<option_num; j++){
+                            RetrofitConnection.Option toption=options.get(j);
+                            CoffeOption option = new CoffeOption(toption.shot_num,toption.size,toption.is_ice,toption.whipping_cream);
+
+                            adapter.addItem(toption.beverage_name, order.get_time, order.order_num,option);
+
+                        }
+                    }
+                    lv_order.setAdapter(adapter);
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), "아이디와 비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<RetrofitConnection.Order>> call, Throwable t) {
+                Log.d("TAG", t.getLocalizedMessage());
+            }
+        });
     }
 
 
