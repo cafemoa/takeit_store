@@ -48,6 +48,7 @@
                 android:maxLength="3"
                 android:textColor="#0c0c0c"
                 android:inputType="numberSigned"
+                android:imeOptions="actionDone"
                 android:hint="000"
                 android:textSize="18sp"/>
 

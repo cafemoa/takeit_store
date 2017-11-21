@@ -16,12 +16,12 @@
         "source": "/Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/res/layout/item_order_list.xml"
     },
     {
-        "merged": "/Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
-        "source": "/Users/parkjaemin/.android/build-cache/776ad56ab3132916b707869a5694d2b4f7cf8a93/output/res/layout/design_menu_item_action_area.xml"
-    },
-    {
         "merged": "/Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
         "source": "/Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
+        "source": "/Users/parkjaemin/.android/build-cache/776ad56ab3132916b707869a5694d2b4f7cf8a93/output/res/layout/design_menu_item_action_area.xml"
     },
     {
         "merged": "/Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
@@ -36,12 +36,12 @@
         "source": "/Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/res/layout/notification_template_part_chronometer.xml"
     },
     {
-        "merged": "/Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
-        "source": "/Users/parkjaemin/.android/build-cache/776ad56ab3132916b707869a5694d2b4f7cf8a93/output/res/layout/design_navigation_menu_item.xml"
-    },
-    {
         "merged": "/Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
         "source": "/Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/res/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "/Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
+        "source": "/Users/parkjaemin/.android/build-cache/776ad56ab3132916b707869a5694d2b4f7cf8a93/output/res/layout/design_navigation_menu_item.xml"
     },
     {
         "merged": "/Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",

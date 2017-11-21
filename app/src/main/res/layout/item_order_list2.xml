@@ -2,14 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:drawable/dialog_holo_light_frame"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
 
     <com.chauthai.swipereveallayout.SwipeRevealLayout
         android:id="@+id/srl_order"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:mode="same_level"
-        android:layout_marginTop="15dp"
         android:elevation="5dp"
         app:dragEdge="right">
 
@@ -37,13 +39,20 @@
             android:layout_height="130dp"
             android:background="@drawable/item_rounded_button">
 
-            <View
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="5dp"
+                android:layout_height="20dp"
                 android:background="#fc0000">
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="서둘러주세요."
+                    android:textColor="#fcfcfc"/>
 
-            </View>
+            </LinearLayout>
 
 
             <LinearLayout
