@@ -42,10 +42,10 @@ public class LoginActivity extends AppCompatActivity {
         retrofit= RetrofitInstance.getInstance(getApplicationContext());
         sp= SharedPreference.getInstance(getApplicationContext());
     }
-    void loginClick(View v){
+
+    public void loginClick(View v){
         String username_str=username.getText().toString();
         String password_str=password.getText().toString();
-
 
         RetrofitConnection.login service = retrofit.create(RetrofitConnection.login.class);
 
@@ -76,7 +76,7 @@ public class LoginActivity extends AppCompatActivity {
         repos.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                Intent i=new Intent(LoginActivity.this, OrderActivity.class);
+                Intent i=new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(i);
                 finish();
             }

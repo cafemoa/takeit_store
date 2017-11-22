@@ -32,6 +32,13 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="20dp">
+            <Button
+                android:id="@+id/min_time_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="확인"
+                android:layout_marginRight="20dp"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -39,15 +46,18 @@
                 android:textSize="18sp"
                 android:textColor="#0c0c0c"
                 android:layout_gravity="center"
+
                 android:text="최소시간 "/>
 
             <EditText
+                android:id="@+id/et_min_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:maxLength="3"
                 android:textColor="#0c0c0c"
                 android:inputType="numberSigned"
+                android:imeOptions="actionDone"
                 android:hint="000"
                 android:textSize="18sp"/>
 

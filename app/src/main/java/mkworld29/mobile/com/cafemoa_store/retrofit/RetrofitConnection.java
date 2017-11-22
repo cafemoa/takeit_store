@@ -80,4 +80,12 @@ public class RetrofitConnection {
                 @Path("PK") int pk
         );
     }
+
+    public interface set_minTime{
+        @FormUrlEncoded
+        @POST("set_min_time/")
+        Call<ResponseBody> repoContributors(
+                @Field("min_time") int min_time
+        );
+    }
 }

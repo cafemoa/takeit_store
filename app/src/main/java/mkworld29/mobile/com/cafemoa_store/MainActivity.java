@@ -14,6 +14,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -21,6 +23,7 @@ import java.util.List;
 
 import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitConnection;
 import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitInstance;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -32,6 +35,8 @@ public class MainActivity extends AppCompatActivity
     private ListView lv_order = null;
     OrderListAdapter adapter = null;
     Retrofit retrofit;
+    Button min_time_confirm;
+    EditText et_min_time;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +46,9 @@ public class MainActivity extends AppCompatActivity
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_main);
+
+        min_time_confirm=(Button)findViewById(R.id.min_time_confirm);
+        et_min_time=(EditText)findViewById(R.id.et_min_time);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -93,19 +101,42 @@ public class MainActivity extends AppCompatActivity
                             CoffeOption option = new CoffeOption(toption.shot_num,toption.size,toption.is_ice,toption.whipping_cream);
 
                             adapter.addItem(toption.beverage_name, order.get_time, order.order_num,option);
-
                         }
                     }
                     lv_order.setAdapter(adapter);
                 }
                 else{
-                    Toast.makeText(getApplicationContext(), "아이디와 비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "통신 에러 발생", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<List<RetrofitConnection.Order>> call, Throwable t) {
                 Log.d("TAG", t.getLocalizedMessage());
+            }
+        });
+
+        min_time_confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RetrofitConnection.set_minTime service = retrofit.create(RetrofitConnection.set_minTime.class);
+                final Call<ResponseBody> repos = service.repoContributors(Integer.parseInt(et_min_time.getText().toString()));
+                repos.enqueue(new Callback<ResponseBody>() {
+                    @Override
+                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                        if (response.code() == 200) {
+                            Toast.makeText(getApplicationContext(), "성공적으로 설정 되었습니다.", Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            Toast.makeText(getApplicationContext(), "통신 에러 발생", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<ResponseBody> call, Throwable t) {
+                        Log.d("TAG", t.getLocalizedMessage());
+                    }
+                });
             }
         });
     }

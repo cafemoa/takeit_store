@@ -34,15 +34,15 @@
         <activity
             android:name="mkworld29.mobile.com.cafemoa_store.MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" >
+        </activity>
+        <activity android:name="mkworld29.mobile.com.cafemoa_store.OrderActivity" >
+        </activity>
+        <activity android:name="mkworld29.mobile.com.cafemoa_store.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name="mkworld29.mobile.com.cafemoa_store.OrderActivity" >
-        </activity>
-        <activity android:name="mkworld29.mobile.com.cafemoa_store.LoginActivity" >
         </activity>
 
         <service android:name="mkworld29.mobile.com.cafemoa_store.MyFirebaseMessagingService" >
