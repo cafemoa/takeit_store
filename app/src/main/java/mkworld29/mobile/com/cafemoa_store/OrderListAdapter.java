@@ -24,7 +24,7 @@ import java.util.ArrayList;
 
 public class OrderListAdapter extends BaseAdapter {
     private final ViewBinderHelper binderHelper;
-    private ArrayList<OrderListItem> listViewItemList = new ArrayList<>();
+    public ArrayList<OrderListItem> listViewItemList = new ArrayList<>();
 
 
     public OrderListAdapter()

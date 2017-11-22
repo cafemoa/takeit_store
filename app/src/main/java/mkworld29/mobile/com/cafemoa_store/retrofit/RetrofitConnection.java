@@ -44,6 +44,7 @@ public class RetrofitConnection {
         public int pk;
         public String order_time;
         public int order_num;
+        public int get_time;
         public int payment_type;
         public int orderer_name;
         public List<Option> options;
@@ -77,6 +78,14 @@ public class RetrofitConnection {
         @POST("complete_order/{PK}")
         Call<ResponseBody> repoContributors(
                 @Path("PK") int pk
+        );
+    }
+
+    public interface set_minTime{
+        @FormUrlEncoded
+        @POST("set_min_time/")
+        Call<ResponseBody> repoContributors(
+                @Field("min_time") int min_time
         );
     }
 }
