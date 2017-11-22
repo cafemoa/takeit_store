@@ -10,13 +10,15 @@ public class OrderListItem2 {
     private CoffeOption option;
     private int wait_time;
     private int order_number;
+    private int pk;
 
-    public OrderListItem2(String content, int wait_time, int order_number, CoffeOption option)
+    public OrderListItem2(String content, int wait_time, int order_number, CoffeOption option, int pk)
     {
         this.content = content;
         this.wait_time = wait_time;
         this.order_number = order_number;
         this.option = option;
+        this.pk=pk;
     }
 
     public String getContent() {
@@ -50,4 +52,6 @@ public class OrderListItem2 {
     public void setOrder_number(int order_number) {
         this.order_number = order_number;
     }
+
+    public int getPk() {return pk;}
 }

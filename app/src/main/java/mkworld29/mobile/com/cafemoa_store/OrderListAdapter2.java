@@ -4,12 +4,14 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.chauthai.swipereveallayout.SwipeRevealLayout;
 import com.chauthai.swipereveallayout.ViewBinderHelper;
@@ -17,6 +19,14 @@ import com.chauthai.swipereveallayout.ViewBinderHelper;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+
+import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitConnection;
+import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitInstance;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
 
 /**
  * Created by parkjaemin on 2017. 11. 15..
@@ -104,8 +114,8 @@ public class OrderListAdapter2 extends BaseAdapter {
             holder.deleteView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    remove(position);
-                    notifyDataSetChanged();
+
+
                 }
             });
         }
@@ -120,9 +130,9 @@ public class OrderListAdapter2 extends BaseAdapter {
         return listViewItemList;
     }
 
-    public void addItem(String content, int wait_time, int order_number, CoffeOption option)
+    public void addItem(String content, int wait_time, int order_number, CoffeOption option,int pk)
     {
-        OrderListItem2 item = new OrderListItem2(content, wait_time, order_number, option);
+        OrderListItem2 item = new OrderListItem2(content, wait_time, order_number, option,pk);
         listViewItemList.add(item);
     }
 

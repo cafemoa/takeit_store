@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity
                             RetrofitConnection.Option toption=options.get(j);
                             CoffeOption option = new CoffeOption(toption.shot_num,toption.size,toption.is_ice,toption.whipping_cream);
 
-                            adapter.addItem(toption.beverage_name, order.get_time, order.order_num,option);
+                            adapter.addItem(toption.beverage_name, order.get_time, order.order_num,option,order.pk);
                         }
                     }
                     lv_order.setAdapter(adapter);

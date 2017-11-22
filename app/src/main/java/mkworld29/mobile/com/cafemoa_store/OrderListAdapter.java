@@ -4,12 +4,14 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.chauthai.swipereveallayout.SwipeRevealLayout;
 import com.chauthai.swipereveallayout.ViewBinderHelper;
@@ -17,6 +19,14 @@ import com.chauthai.swipereveallayout.ViewBinderHelper;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+
+import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitConnection;
+import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitInstance;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
 
 /**
  * Created by parkjaemin on 2017. 11. 15..
@@ -104,8 +114,27 @@ public class OrderListAdapter extends BaseAdapter {
             holder.deleteView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    remove(position);
-                    notifyDataSetChanged();
+                    Retrofit retrofit= RetrofitInstance.getInstance(context);
+                    RetrofitConnection.complete_order service = retrofit.create(RetrofitConnection.complete_order.class);
+                    final Call<ResponseBody> repos = service.repoContributors(listViewItemList.get(position).getBeverage_pk());
+                    repos.enqueue(new Callback<ResponseBody>() {
+                        @Override
+                        public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                            if (response.code() == 200) {
+                                remove(position);
+                                notifyDataSetChanged();
+                                Toast.makeText(context, "음료완성이 완료되었습니다.", Toast.LENGTH_SHORT).show();
+                            }
+                            else{
+                                Toast.makeText(context, "통신 에러 발생", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<ResponseBody> call, Throwable t) {
+                            Log.d("TAG", t.getLocalizedMessage());
+                        }
+                    });
                 }
             });
         }
@@ -120,9 +149,9 @@ public class OrderListAdapter extends BaseAdapter {
         return listViewItemList;
     }
 
-    public void addItem(String content, int wait_time, int order_number, CoffeOption option)
+    public void addItem(String content, int wait_time, int order_number, CoffeOption option,int beverage_pk)
     {
-        OrderListItem item = new OrderListItem(content, wait_time, order_number, option);
+        OrderListItem item = new OrderListItem(content, wait_time, order_number, option,beverage_pk);
         listViewItemList.add(item);
     }
 
