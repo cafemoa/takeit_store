@@ -79,26 +79,6 @@ activity#mkworld29.mobile.com.cafemoa_store.LoginActivity
 ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:23:9-25:20
 	android:name
 		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:23:19-48
-service#mkworld29.mobile.com.cafemoa_store.MyFirebaseMessagingService
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:26:9-31:19
-	android:name
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:27:13-55
-intent-filter#com.google.firebase.MESSAGING_EVENT
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:28:13-30:29
-action#com.google.firebase.MESSAGING_EVENT
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:29:17-77
-	android:name
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:29:25-75
-service#mkworld29.mobile.com.cafemoa_store.MyFirebaseInstanceIDService
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:33:9-38:19
-	android:name
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:34:13-56
-intent-filter#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:35:13-37:29
-action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:36:17-79
-	android:name
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:36:25-77
 meta-data#com.google.firebase.messaging.default_notification_icon
 ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:40:9-42:54
 	android:resource
@@ -149,6 +129,14 @@ ADDED from [com.google.firebase:firebase-messaging:10.2.6] /Users/parkjaemin/.an
 		ADDED from [com.google.firebase:firebase-messaging:10.2.6] /Users/parkjaemin/.android/build-cache/94261e1b30b3fa1094d87148f5ed7bd6d2fd24a0/output/AndroidManifest.xml:23:88-111
 	android:name
 		ADDED from [com.google.firebase:firebase-messaging:10.2.6] /Users/parkjaemin/.android/build-cache/94261e1b30b3fa1094d87148f5ed7bd6d2fd24a0/output/AndroidManifest.xml:23:18-87
+intent-filter#com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:10.2.6] /Users/parkjaemin/.android/build-cache/94261e1b30b3fa1094d87148f5ed7bd6d2fd24a0/output/AndroidManifest.xml:24:13-26:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-messaging:10.2.6] /Users/parkjaemin/.android/build-cache/94261e1b30b3fa1094d87148f5ed7bd6d2fd24a0/output/AndroidManifest.xml:24:28-51
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:10.2.6] /Users/parkjaemin/.android/build-cache/94261e1b30b3fa1094d87148f5ed7bd6d2fd24a0/output/AndroidManifest.xml:25:17-77
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:10.2.6] /Users/parkjaemin/.android/build-cache/94261e1b30b3fa1094d87148f5ed7bd6d2fd24a0/output/AndroidManifest.xml:25:25-75
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:25.3.1] /Users/parkjaemin/.android/build-cache/776ad56ab3132916b707869a5694d2b4f7cf8a93/output/AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/AndroidManifest.xml:25:5-27:34
@@ -254,6 +242,14 @@ ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/
 		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:43:83-106
 	android:name
 		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:43:18-82
+intent-filter#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:44:13-46:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:44:28-51
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:45:17-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:45:25-77
 provider#com.google.firebase.provider.FirebaseInitProvider
 ADDED from [com.google.firebase:firebase-common:10.2.6] /Users/parkjaemin/.android/build-cache/8a6735f92b617c4fd37275b3c51553bf021b94ab/output/AndroidManifest.xml:6:9-194
 	android:authorities

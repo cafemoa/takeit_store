@@ -61,7 +61,8 @@ public class MainActivity extends AppCompatActivity
         CoffeOption option = new CoffeOption(2,3,3,true,true,1);
 
         for(int i=0;i<5;i++) {
-            adapter.addItem(new OrderListItem("아메리카노", 3, 1, option));
+            adapter.addItem(new OrderListItem("아메리카노", 7, 1, option));
+            adapter.addItem(new OrderListItem("카페라떼", 2, 1, option));
         }
         lv_order.setAdapter(adapter);
 

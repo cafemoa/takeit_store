@@ -44,17 +44,20 @@
         </activity>
         <activity android:name="mkworld29.mobile.com.cafemoa_store.LoginActivity" >
         </activity>
+        <!-- <service -->
+        <!-- android:name=".MyFirebaseMessagingService"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.MESSAGING_EVENT"/> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
 
-        <service android:name="mkworld29.mobile.com.cafemoa_store.MyFirebaseMessagingService" >
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
-        <service android:name="mkworld29.mobile.com.cafemoa_store.MyFirebaseInstanceIDService" >
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
+
+        <!-- <service -->
+        <!-- android:name=".MyFirebaseInstanceIDService"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
