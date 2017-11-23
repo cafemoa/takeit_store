@@ -76,7 +76,7 @@ public class LoginActivity extends AppCompatActivity {
         repos.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                Intent i=new Intent(LoginActivity.this, MainActivity.class);
+                Intent i=new Intent(LoginActivity.this, StartActivity.class);
                 startActivity(i);
                 finish();
             }

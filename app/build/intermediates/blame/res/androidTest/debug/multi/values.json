@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\parkjaemin\\Desktop\\TakeIt\\Takeit_store\\takeit_store\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "outputFile": "/Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
         "map": [
             {
                 "to": {
@@ -11,31 +11,7 @@
                     "endOffset": 96
                 },
                 "from": {
-                    "file": "C:\\Users\\parkjaemin\\.android\\build-cache\\51343307ac6eb52ec04347153bcbb7a5bb4eb49e\\output\\res\\values\\values.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 229,
-                        "endColumn": 45,
-                        "endOffset": 270
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "C:\\Users\\ABCla\\Desktop\\takeit_store\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 45,
-                    "endOffset": 96
-                },
-                "from": {
-                    "file": "C:\\Users\\ABCla\\.android\\build-cache\\929f098c6ff787affdaa2634152c65f40cd4d1be\\output\\res\\values\\values.xml",
+                    "file": "/Users/parkjaemin/.android/build-cache/51343307ac6eb52ec04347153bcbb7a5bb4eb49e/output/res/values/values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

@@ -1,18 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\ABCla\\Desktop\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher_round.png",
-        "source": "C:\\Users\\ABCla\\Desktop\\takeit_store\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "/Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher.png",
+        "source": "/Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\ABCla\\Desktop\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher.png",
-        "source": "C:\\Users\\ABCla\\Desktop\\takeit_store\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\parkjaemin\\Desktop\\TakeIt\\Takeit_store\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher_round.png",
-        "source": "C:\\Users\\parkjaemin\\Desktop\\TakeIt\\Takeit_store\\takeit_store\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\Users\\parkjaemin\\Desktop\\TakeIt\\Takeit_store\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher.png",
-        "source": "C:\\Users\\parkjaemin\\Desktop\\TakeIt\\Takeit_store\\takeit_store\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "/Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher_round.png",
+        "source": "/Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
     }
 ]
