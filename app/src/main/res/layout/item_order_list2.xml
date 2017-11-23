@@ -29,7 +29,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textColor="#fcfcfc"
-                android:text="카드삭제"/>
+                android:text="완료"/>
 
             </FrameLayout>
 
@@ -40,8 +40,10 @@
             android:background="@drawable/item_rounded_button">
 
             <LinearLayout
+                android:id="@+id/lv_is_three_min"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
+                android:visibility="gone"
                 android:background="#fc0000">
 
                 <TextView

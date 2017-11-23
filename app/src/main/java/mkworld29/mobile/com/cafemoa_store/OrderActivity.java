@@ -25,6 +25,7 @@ public class OrderActivity extends AppCompatActivity implements SwipeRefreshLayo
     private Retrofit retrofit;
     private OrderListAdapter adapter;
     private SwipeRefreshLayout mSwipeRefreshLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

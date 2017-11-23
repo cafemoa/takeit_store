@@ -79,26 +79,6 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:23:17-77
 	android:name
 		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:23:27-74
-service#mkworld29.mobile.com.cafemoa_store.MyFirebaseMessagingService
-ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:26:9-31:19
-	android:name
-		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:27:13-55
-intent-filter#com.google.firebase.MESSAGING_EVENT
-ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:28:13-30:29
-action#com.google.firebase.MESSAGING_EVENT
-ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:29:17-77
-	android:name
-		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:29:25-75
-service#mkworld29.mobile.com.cafemoa_store.MyFirebaseInstanceIDService
-ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:33:9-38:19
-	android:name
-		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:34:13-56
-intent-filter#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:35:13-37:29
-action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:36:17-79
-	android:name
-		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:36:25-77
 meta-data#com.google.firebase.messaging.default_notification_icon
 ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:40:9-42:54
 	android:resource
@@ -149,6 +129,14 @@ ADDED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\ABCla\.andro
 		ADDED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\ABCla\.android\build-cache\607e6fdebc6d9337803f7cdf4540dd4a17851cf8\output\AndroidManifest.xml:23:88-111
 	android:name
 		ADDED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\ABCla\.android\build-cache\607e6fdebc6d9337803f7cdf4540dd4a17851cf8\output\AndroidManifest.xml:23:18-87
+intent-filter#com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\ABCla\.android\build-cache\607e6fdebc6d9337803f7cdf4540dd4a17851cf8\output\AndroidManifest.xml:24:13-26:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\ABCla\.android\build-cache\607e6fdebc6d9337803f7cdf4540dd4a17851cf8\output\AndroidManifest.xml:24:28-51
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\ABCla\.android\build-cache\607e6fdebc6d9337803f7cdf4540dd4a17851cf8\output\AndroidManifest.xml:25:17-77
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\ABCla\.android\build-cache\607e6fdebc6d9337803f7cdf4540dd4a17851cf8\output\AndroidManifest.xml:25:25-75
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:25.3.1] C:\Users\ABCla\.android\build-cache\fee67500d19a7af19a39f7e8af394eb1a442b376\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\ABCla\.android\build-cache\d6530cbb2e6f11a662e1ad0bb7c46a81f166cff7\output\AndroidManifest.xml:25:5-27:34
@@ -254,6 +242,14 @@ ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\bui
 		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:43:83-106
 	android:name
 		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:43:18-82
+intent-filter#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:44:13-46:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:44:28-51
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:45:17-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:45:25-77
 provider#com.google.firebase.provider.FirebaseInitProvider
 ADDED from [com.google.firebase:firebase-common:10.2.6] C:\Users\ABCla\.android\build-cache\569fa3c85b7c3738d1a9aca0f21fd68dd09d7511\output\AndroidManifest.xml:6:9-194
 	android:authorities
