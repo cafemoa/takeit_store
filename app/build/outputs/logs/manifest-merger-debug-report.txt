@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:2:1-51:12
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:2:1-65:12
 	package
 		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:3:5-49
 		INJECTED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml
@@ -21,7 +21,7 @@ MERGED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\bu
 	android:name
 		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:7:5-49:19
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:7:5-63:19
 MERGED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\ABCla\.android\build-cache\607e6fdebc6d9337803f7cdf4540dd4a17851cf8\output\AndroidManifest.xml:19:5-29:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ABCla\.android\build-cache\5b3cf7f1b2aa1ce0f663979913a1049645baa093\output\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:25.3.1] C:\Users\ABCla\.android\build-cache\fee67500d19a7af19a39f7e8af394eb1a442b376\output\AndroidManifest.xml:29:5-20
@@ -91,6 +91,26 @@ ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:
 		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:47:13-50
 	android:name
 		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:46:13-84
+service#mkworld29.mobile.com.cafemoa_store.MyFirebaseMessagingService
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:49:9-54:19
+	android:name
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:50:13-55
+intent-filter#com.google.firebase.MESSAGING_EVENT
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:51:13-53:29
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:52:17-77
+	android:name
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:52:25-75
+service#mkworld29.mobile.com.cafemoa_store.MyFirebaseInstanceIDService
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:57:9-62:19
+	android:name
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:58:13-56
+intent-filter#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:59:13-61:29
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:60:17-79
+	android:name
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:60:25-77
 uses-sdk
 INJECTED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\ABCla\.android\build-cache\607e6fdebc6d9337803f7cdf4540dd4a17851cf8\output\AndroidManifest.xml:17:5-43
@@ -129,14 +149,6 @@ ADDED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\ABCla\.andro
 		ADDED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\ABCla\.android\build-cache\607e6fdebc6d9337803f7cdf4540dd4a17851cf8\output\AndroidManifest.xml:23:88-111
 	android:name
 		ADDED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\ABCla\.android\build-cache\607e6fdebc6d9337803f7cdf4540dd4a17851cf8\output\AndroidManifest.xml:23:18-87
-intent-filter#com.google.firebase.MESSAGING_EVENT
-ADDED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\ABCla\.android\build-cache\607e6fdebc6d9337803f7cdf4540dd4a17851cf8\output\AndroidManifest.xml:24:13-26:29
-	android:priority
-		ADDED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\ABCla\.android\build-cache\607e6fdebc6d9337803f7cdf4540dd4a17851cf8\output\AndroidManifest.xml:24:28-51
-action#com.google.firebase.MESSAGING_EVENT
-ADDED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\ABCla\.android\build-cache\607e6fdebc6d9337803f7cdf4540dd4a17851cf8\output\AndroidManifest.xml:25:17-77
-	android:name
-		ADDED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\ABCla\.android\build-cache\607e6fdebc6d9337803f7cdf4540dd4a17851cf8\output\AndroidManifest.xml:25:25-75
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:25.3.1] C:\Users\ABCla\.android\build-cache\fee67500d19a7af19a39f7e8af394eb1a442b376\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\ABCla\.android\build-cache\d6530cbb2e6f11a662e1ad0bb7c46a81f166cff7\output\AndroidManifest.xml:25:5-27:34
@@ -242,14 +254,6 @@ ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\bui
 		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:43:83-106
 	android:name
 		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:43:18-82
-intent-filter#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:44:13-46:29
-	android:priority
-		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:44:28-51
-action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:45:17-79
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:45:25-77
 provider#com.google.firebase.provider.FirebaseInitProvider
 ADDED from [com.google.firebase:firebase-common:10.2.6] C:\Users\ABCla\.android\build-cache\569fa3c85b7c3738d1a9aca0f21fd68dd09d7511\output\AndroidManifest.xml:6:9-194
 	android:authorities

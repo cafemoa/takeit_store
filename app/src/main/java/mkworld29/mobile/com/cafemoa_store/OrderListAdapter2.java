@@ -5,12 +5,8 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
-<<<<<<< HEAD
-import android.util.Log;
-=======
 import android.text.Editable;
 import android.text.TextWatcher;
->>>>>>> c4e23d7b55dfb8dc27a321883a764eab26140c74
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -86,7 +82,7 @@ public class OrderListAdapter2 extends BaseAdapter {
             holder.tv_number            =   (TextView)convertView.findViewById(R.id.tv_order_number);
             holder.swipeLayout          =   (SwipeRevealLayout)convertView.findViewById(R.id.srl_order);
             holder.deleteView           =   convertView.findViewById(R.id.delete_view);
-            holder.lv_is_three_min      =   (ListView)convertView.findViewById(R.id.lv_is_three_min);
+            //holder.lv_is_three_min      =   (ListView)convertView.findViewById(R.id.lv_is_three_min);
 
             holder.tv_wait_time.setText("7");
 
