@@ -1,29 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fcfcfc"
+    tools:context="mkworld29.mobile.com.cafemoa_store.LoginActivity"
+    >
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="29dp"
+        android:src="@drawable/login_back"
+        android:layout_marginLeft="14.5dp"
+        android:layout_marginTop="22.3dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/imageView2" />
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:src="@drawable/decoration"
+        android:layout_marginTop="-10dp"
+        android:layout_alignTop="@id/imageView2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="19.3dp"
+        android:id="@+id/imageView4" />
 
-    <EditText
-        android:id="@+id/username"
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:text="로그인"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/imageView4"
+        android:layout_toRightOf="@+id/imageView2"
+        android:layout_toEndOf="@+id/imageView2" />
+
+
+
+    <LinearLayout
+        android:layout_marginTop="38.3dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="ID" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="#00000000"
+        android:orientation="vertical"
+        android:layout_below="@id/tv_login"
+        android:gravity="center"
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:hint="PASSWORD"
-         />
+        android:layout_weight="5"
+        android:id="@+id/linearLayout">
 
+        <!--android:background="@drawable/email_edit_text_border"-->
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#0c0c0c"
+            android:hint="ID"
+            android:inputType="text"
+            />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:textColor="#0c0c0c"
+            android:hint="Password"
+            android:inputType="textPassword"
+            />
+
+    </LinearLayout>
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="115dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="5dp"
         android:onClick="loginClick"
-        android:text="로그인" />
-</LinearLayout>
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/login_button"
+        android:layout_below="@+id/linearLayout"/>
+</RelativeLayout>

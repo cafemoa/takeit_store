@@ -25,7 +25,7 @@
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:textSize="10sp"
+                android:textSize="13sp"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textColor="#fcfcfc"
@@ -71,13 +71,13 @@
                     android:gravity="center">
 
                     <TextView
-                        android:layout_width="30dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="번호"
                         android:textStyle="bold"
                         android:gravity="center"
                         android:textColor="#0c0c0c"
-                        android:textSize="12sp" />
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/tv_order_number"
@@ -87,23 +87,27 @@
                         android:gravity="center"
                         android:textColor="#0c0c0c"
                         android:textStyle="bold"
-                        android:textSize="22sp" />
+                        android:textSize="25sp" />
 
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="220dp"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp">
 
                     <TextView
                         android:id="@+id/tv_content"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:textSize="17sp"
+                        android:textSize="20sp"
                         android:textColor="#0c0c0c"
+                        android:layout_gravity="center"
+                        android:gravity="center"
                         android:textStyle="bold"
                         android:text="아메리카노 (ICE)"/>
 
@@ -112,6 +116,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
                         android:textColor="#646668"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="16sp"
                         android:text="S/샷 추가 없음"/>
 
                 </LinearLayout>
@@ -126,7 +133,7 @@
                         android:id="@+id/tv_wait_time"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="12sp"
+                        android:textSize="15sp"
                         android:text="7"
                         android:textColor="#fc0c0c"/>
 
@@ -134,7 +141,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="12sp"
+                    android:textSize="15sp"
                     android:text=" 분 후"
                     android:textColor="#fc0c0c"/>
 

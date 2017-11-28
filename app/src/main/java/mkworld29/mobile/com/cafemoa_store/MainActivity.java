@@ -3,6 +3,7 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,10 +14,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
@@ -37,7 +41,6 @@ public class MainActivity extends AppCompatActivity
     private ListView lv_order = null;
     OrderListAdapter adapter = null;
     Retrofit retrofit;
-    Button min_time_confirm;
     EditText et_min_time;
 
     @Override
@@ -58,8 +61,43 @@ public class MainActivity extends AppCompatActivity
             }
         },500,10000);
 
-        min_time_confirm=(Button)findViewById(R.id.min_time_confirm);
         et_min_time=(EditText)findViewById(R.id.et_min_time);
+
+        et_min_time.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    RetrofitConnection.set_minTime service = retrofit.create(RetrofitConnection.set_minTime.class);
+                    Call<ResponseBody> repos = null;
+                    try{
+                        repos = service.repoContributors(Integer.parseInt(et_min_time.getText().toString()));
+                    }catch (NumberFormatException e){
+                        e.printStackTrace();
+                    }
+                    repos.enqueue(new Callback<ResponseBody>() {
+                        @Override
+                        public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                            if (response.code() == 200) {
+                                Toast.makeText(getApplicationContext(), "성공적으로 설정 되었습니다.", Toast.LENGTH_SHORT).show();
+                            }
+                            else{
+                                Toast.makeText(getApplicationContext(), "통신 에러 발생", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<ResponseBody> call, Throwable t) {
+                            Log.d("TAG", t.getLocalizedMessage());
+                        }
+                    });
+                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(et_min_time.getWindowToken(), 0);
+
+                    return true;
+                }
+                return false;
+            }
+        });
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -87,36 +125,6 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-
-        min_time_confirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                RetrofitConnection.set_minTime service = retrofit.create(RetrofitConnection.set_minTime.class);
-                Call<ResponseBody> repos = null;
-                try{
-                    repos = service.repoContributors(Integer.parseInt(et_min_time.getText().toString()));
-                }catch (NumberFormatException e){
-                    e.printStackTrace();
-                    return;
-                }
-                repos.enqueue(new Callback<ResponseBody>() {
-                    @Override
-                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                        if (response.code() == 200) {
-                            Toast.makeText(getApplicationContext(), "성공적으로 설정 되었습니다.", Toast.LENGTH_SHORT).show();
-                        }
-                        else{
-                            Toast.makeText(getApplicationContext(), "통신 에러 발생", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<ResponseBody> call, Throwable t) {
-                        Log.d("TAG", t.getLocalizedMessage());
-                    }
-                });
-            }
-        });
     }
 
     @Override
@@ -168,7 +176,7 @@ public class MainActivity extends AppCompatActivity
                             RetrofitConnection.Option toption=options.get(j);
                             CoffeOption option = new CoffeOption(toption.shot_num,toption.size,toption.is_ice,toption.whipping_cream);
 
-                            adapter.addItem(toption.beverage_name, order.get_time, order.order_num,option);
+                            adapter.addItem(toption.beverage_name, order.get_time, order.order_num,option,order.pk);
                         }
                     }
                     lv_order.setAdapter(adapter);

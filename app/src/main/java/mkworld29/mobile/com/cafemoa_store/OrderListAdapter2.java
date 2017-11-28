@@ -7,13 +7,11 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,11 +35,12 @@ import retrofit2.Retrofit;
  * Created by parkjaemin on 2017. 11. 15..
  */
 
-public class OrderListAdapter extends BaseAdapter {
+public class OrderListAdapter2 extends BaseAdapter {
     private final ViewBinderHelper binderHelper;
     private ArrayList<OrderListItem> listViewItemList = new ArrayList<>();
 
-    public OrderListAdapter()
+
+    public OrderListAdapter2()
     {
         listViewItemList = new ArrayList<>();
         binderHelper = new ViewBinderHelper();
@@ -83,7 +82,7 @@ public class OrderListAdapter extends BaseAdapter {
             holder.tv_number            =   (TextView)convertView.findViewById(R.id.tv_order_number);
             holder.swipeLayout          =   (SwipeRevealLayout)convertView.findViewById(R.id.srl_order);
             holder.deleteView           =   convertView.findViewById(R.id.delete_view);
-            holder.lv_is_three_min      =   (LinearLayout)convertView.findViewById(R.id.lv_is_three_min);
+            //holder.lv_is_three_min      =   (ListView)convertView.findViewById(R.id.lv_is_three_min);
 
             holder.tv_wait_time.setText("7");
 
@@ -113,11 +112,6 @@ public class OrderListAdapter extends BaseAdapter {
                 str_content += " (ICE)";
             else str_content += " (HOT)";
 
-            if(Integer.parseInt(holder.tv_wait_time.getText().toString()) <= 3)
-                holder.lv_is_three_min.setVisibility(View.VISIBLE);
-            else
-                holder.lv_is_three_min.setVisibility(View.GONE);
-
 
             holder.tv_wait_time.addTextChangedListener(new TextWatcher() {
                 @Override
@@ -128,9 +122,9 @@ public class OrderListAdapter extends BaseAdapter {
                 @Override
                 public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                     if(Integer.parseInt(charSequence.toString())<=3)
-                        holder.lv_is_three_min.setVisibility(View.VISIBLE);
-                    else
                         holder.lv_is_three_min.setVisibility(View.GONE);
+                    else
+                        holder.lv_is_three_min.setVisibility(View.VISIBLE);
                 }
 
                 @Override
@@ -148,27 +142,8 @@ public class OrderListAdapter extends BaseAdapter {
             holder.deleteView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Retrofit retrofit= RetrofitInstance.getInstance(context);
-                    RetrofitConnection.complete_order service = retrofit.create(RetrofitConnection.complete_order.class);
-                    final Call<ResponseBody> repos = service.repoContributors(listViewItemList.get(position).getBeverage_pk());
-                    repos.enqueue(new Callback<ResponseBody>() {
-                        @Override
-                        public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                            if (response.code() == 200) {
-                                remove(position);
-                                notifyDataSetChanged();
-                                Toast.makeText(context, "음료완성이 완료되었습니다.", Toast.LENGTH_SHORT).show();
-                            }
-                            else{
-                                Toast.makeText(context, "통신 에러 발생", Toast.LENGTH_SHORT).show();
-                            }
-                        }
 
-                        @Override
-                        public void onFailure(Call<ResponseBody> call, Throwable t) {
-                            Log.d("TAG", t.getLocalizedMessage());
-                        }
-                    });
+
                 }
             });
         }
@@ -181,9 +156,9 @@ public class OrderListAdapter extends BaseAdapter {
         return listViewItemList;
     }
 
-    public void addItem(String content, int wait_time, int order_number, CoffeOption option,int beverage_pk)
+    public void addItem(String content, int wait_time, int order_number, CoffeOption option,int pk)
     {
-        OrderListItem item = new OrderListItem(content, wait_time, order_number, option,beverage_pk);
+        OrderListItem item = new OrderListItem(content, wait_time, order_number, option,pk);
         listViewItemList.add(item);
     }
 
@@ -209,7 +184,7 @@ public class OrderListAdapter extends BaseAdapter {
 
     private class ViewHolder {
         private TextView tv_content, tv_option, tv_wait_time, tv_number;
-        private LinearLayout lv_is_three_min;
+        private ListView lv_is_three_min;
         private View deleteView;
         private SwipeRevealLayout swipeLayout;
     }
