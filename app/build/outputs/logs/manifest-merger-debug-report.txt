@@ -1,291 +1,291 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:2:1-62:12
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:2:1-62:12
 	package
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:3:5-49
-		INJECTED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:3:5-49
+		INJECTED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:5:5-67
-MERGED from [com.google.firebase:firebase-analytics:10.2.6] /Users/parkjaemin/.android/build-cache/cb627eb38ae3bfe9890117312fb38fe2c0cb46b0/output/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] /Users/parkjaemin/.android/build-cache/1bb303abdee550209f988970eabd56387116577f/output/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:20:5-66
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:5:5-67
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\ABCla\.android\build-cache\e70eb116f8e010889f7a2fc44e07f2855763ee8c\output\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] C:\Users\ABCla\.android\build-cache\7b1874b3e225a8a460b1a287da1987b3560d3bfd\output\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:20:5-66
 	android:name
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:5:22-64
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:6:5-79
-MERGED from [com.google.firebase:firebase-analytics:10.2.6] /Users/parkjaemin/.android/build-cache/cb627eb38ae3bfe9890117312fb38fe2c0cb46b0/output/AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] /Users/parkjaemin/.android/build-cache/1bb303abdee550209f988970eabd56387116577f/output/AndroidManifest.xml:21:5-78
-MERGED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:19:5-78
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:6:5-79
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\ABCla\.android\build-cache\e70eb116f8e010889f7a2fc44e07f2855763ee8c\output\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] C:\Users\ABCla\.android\build-cache\7b1874b3e225a8a460b1a287da1987b3560d3bfd\output\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:19:5-78
 	android:name
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:6:22-76
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:6:22-76
 uses-permission#android.permission.CHANGE_NETWORK_STATE
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:7:5-79
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:7:5-79
 	android:name
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:7:22-76
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:7:22-76
 application
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:9:5-60:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/parkjaemin/.android/build-cache/e7eb4fc4d7cf7ee3a841b0b9d5dc44f7c4a5839a/output/AndroidManifest.xml:9:5-20
-MERGED from [com.google.firebase:firebase-messaging:10.2.6] /Users/parkjaemin/.android/build-cache/94261e1b30b3fa1094d87148f5ed7bd6d2fd24a0/output/AndroidManifest.xml:19:5-29:19
-MERGED from [com.android.support:design:25.3.1] /Users/parkjaemin/.android/build-cache/776ad56ab3132916b707869a5694d2b4f7cf8a93/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/parkjaemin/.android/build-cache/f2edd761d2ced687c0fee68ebbd18c1dcb28a0cf/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/parkjaemin/.android/build-cache/3374be14ad36846a04730ff5d2762e5036ea93bf/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:transition:25.3.1] /Users/parkjaemin/.android/build-cache/a1a78193d94c90010901ce1e7cad09f237a16d18/output/AndroidManifest.xml:26:5-20
-MERGED from [com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.0] /Users/parkjaemin/.android/build-cache/3c4147d13a74cfae504be1ba5ae3ede64ec00ab5/output/AndroidManifest.xml:12:5-20
-MERGED from [com.google.firebase:firebase-core:10.2.6] /Users/parkjaemin/.android/build-cache/34f1561f9bdf9a2a8054bd23b7b260bf89b4445c/output/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-analytics:10.2.6] /Users/parkjaemin/.android/build-cache/cb627eb38ae3bfe9890117312fb38fe2c0cb46b0/output/AndroidManifest.xml:24:5-33:19
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] /Users/parkjaemin/.android/build-cache/1bb303abdee550209f988970eabd56387116577f/output/AndroidManifest.xml:24:5-28:19
-MERGED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:28:5-49:19
-MERGED from [com.google.firebase:firebase-common:10.2.6] /Users/parkjaemin/.android/build-cache/8a6735f92b617c4fd37275b3c51553bf021b94ab/output/AndroidManifest.xml:4:5-7:19
-MERGED from [com.google.android.gms:play-services-tasks:10.2.6] /Users/parkjaemin/.android/build-cache/06ae64cf8d95defd16c45f6b024d136f40048e76/output/AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:10.2.6] /Users/parkjaemin/.android/build-cache/eb785a4c23fbd9098e00f13429511259d7c693f2/output/AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support:support-v4:25.3.1] /Users/parkjaemin/.android/build-cache/55ca5767c4302cdaca3753f2b62f9c19d20f9718/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] /Users/parkjaemin/.android/build-cache/79e6d609856f442604318024d098303aa8f8daa3/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] /Users/parkjaemin/.android/build-cache/a76e030fbc0d181e67d3eba3a04b0dc8a1732c5e/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] /Users/parkjaemin/.android/build-cache/7e1e0b0e19b9c31cfc039fb7fc7089e973704065/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] /Users/parkjaemin/.android/build-cache/5a564507efeafa440cd5c1f2e4bd9e5825f3a50f/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] /Users/parkjaemin/.android/build-cache/00f3c3f5332f2f6db8eeab0b49a3c2532425d78a/output/AndroidManifest.xml:29:5-20
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:9:5-60:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ABCla\.android\build-cache\5b3cf7f1b2aa1ce0f663979913a1049645baa093\output\AndroidManifest.xml:9:5-20
+MERGED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\ABCla\.android\build-cache\607e6fdebc6d9337803f7cdf4540dd4a17851cf8\output\AndroidManifest.xml:19:5-29:19
+MERGED from [com.android.support:design:25.3.1] C:\Users\ABCla\.android\build-cache\fee67500d19a7af19a39f7e8af394eb1a442b376\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\ABCla\.android\build-cache\d6530cbb2e6f11a662e1ad0bb7c46a81f166cff7\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\ABCla\.android\build-cache\640e8ae03035df15462f8039e0d6a79157eec3d2\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\ABCla\.android\build-cache\2b2e3f7b380ca00f7d0c97ea044161133b53ea6d\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] C:\Users\ABCla\.android\build-cache\3394f1b4f47a217b0bfea4e4e2023808cd493efa\output\AndroidManifest.xml:26:5-20
+MERGED from [com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.0] C:\Users\ABCla\.android\build-cache\34b1016c20d61db668c59f18c9aba74cca66d609\output\AndroidManifest.xml:12:5-20
+MERGED from [com.google.firebase:firebase-core:10.2.6] C:\Users\ABCla\.android\build-cache\3cafce6cd9ed0587759b87a2350a5972986a30fe\output\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\ABCla\.android\build-cache\e70eb116f8e010889f7a2fc44e07f2855763ee8c\output\AndroidManifest.xml:24:5-33:19
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] C:\Users\ABCla\.android\build-cache\7b1874b3e225a8a460b1a287da1987b3560d3bfd\output\AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:28:5-49:19
+MERGED from [com.google.firebase:firebase-common:10.2.6] C:\Users\ABCla\.android\build-cache\569fa3c85b7c3738d1a9aca0f21fd68dd09d7511\output\AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.android.gms:play-services-tasks:10.2.6] C:\Users\ABCla\.android\build-cache\f3a295f0b3a1dac70b9d317979074c1490bfd8c0\output\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:10.2.6] C:\Users\ABCla\.android\build-cache\da315e90947ed4e3b9c3cbf203ac47d3ca690386\output\AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\ABCla\.android\build-cache\fbc62ec07f074dba660d942780e5cfa15b097c06\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\ABCla\.android\build-cache\edace8ce06860283c3e9a43a3e2f4e0826b82ecf\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\ABCla\.android\build-cache\842d821d94046f54661e41dabba2b1f56a65dc01\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\ABCla\.android\build-cache\e3e98490a2f4ba89957ff867ff01e1d6d321b46a\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\ABCla\.android\build-cache\1eaa275fee38621135ebd31eea91bb557add1c36\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\ABCla\.android\build-cache\7a309b323acee76633297d006fb68a1ad72ec04b\output\AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:12:9-41
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:12:9-41
 	android:supportsRtl
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:14:9-35
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:14:9-35
 	android:roundIcon
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:13:9-54
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:13:9-54
 	android:allowBackup
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:10:9-35
 	android:icon
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:11:9-43
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:11:9-43
 	android:theme
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:15:9-40
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:15:9-40
 activity#mkworld29.mobile.com.cafemoa_store.MainActivity
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:16:9-18:75
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:16:9-18:75
 	android:theme
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:18:13-63
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:18:13-63
 	android:name
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:17:13-41
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:17:13-41
 activity#mkworld29.mobile.com.cafemoa_store.OrderActivity
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:19:9-51
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:19:9-51
 	android:name
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:19:19-48
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:19:19-48
 activity#mkworld29.mobile.com.cafemoa_store.LoginActivity
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:20:9-23:20
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:20:9-23:20
 	android:theme
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:21:13-63
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:21:13-63
 	android:name
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:20:19-48
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:20:19-48
 service#mkworld29.mobile.com.cafemoa_store.MyFirebaseMessagingService
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:25:9-29:19
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:25:9-29:19
 	android:name
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:25:18-60
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:25:18-60
 intent-filter#com.google.firebase.MESSAGING_EVENT
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:26:13-28:29
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:26:13-28:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:27:17-78
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:27:17-78
 	android:name
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:27:25-75
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:27:25-75
 service#mkworld29.mobile.com.cafemoa_store.MyFirebaseInstanceIDService
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:30:9-34:19
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:30:9-34:19
 	android:name
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:30:18-61
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:30:18-61
 intent-filter#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:31:13-33:29
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:31:13-33:29
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:32:17-80
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:32:17-80
 	android:name
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:32:25-77
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:32:25-77
 meta-data#com.google.firebase.messaging.default_notification_icon
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:36:9-38:54
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:36:9-38:54
 	android:resource
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:38:13-51
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:38:13-51
 	android:name
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:37:13-83
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:37:13-83
 meta-data#com.google.firebase.messaging.default_notification_color
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:43:9-45:53
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:43:9-45:53
 	android:resource
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:45:13-50
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:45:13-50
 	android:name
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:44:13-84
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:44:13-84
 activity#mkworld29.mobile.com.cafemoa_store.StartActivity
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:47:9-51:20
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:47:9-51:20
 	android:theme
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:49:13-63
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:49:13-63
 	android:name
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:48:13-42
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:48:13-42
 activity#mkworld29.mobile.com.cafemoa_store.SplashActivity
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:52:9-59:20
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:52:9-59:20
 	android:theme
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:53:13-63
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:53:13-63
 	android:name
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:52:19-49
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:52:19-49
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:54:13-58:29
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:54:13-58:29
 action#android.intent.action.MAIN
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:55:17-69
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:55:17-69
 	android:name
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:55:25-66
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:55:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:57:17-77
+ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:57:17-77
 	android:name
-		ADDED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml:57:27-74
+		ADDED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml:57:27-74
 uses-sdk
-INJECTED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/parkjaemin/.android/build-cache/e7eb4fc4d7cf7ee3a841b0b9d5dc44f7c4a5839a/output/AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-messaging:10.2.6] /Users/parkjaemin/.android/build-cache/94261e1b30b3fa1094d87148f5ed7bd6d2fd24a0/output/AndroidManifest.xml:17:5-43
-MERGED from [com.android.support:design:25.3.1] /Users/parkjaemin/.android/build-cache/776ad56ab3132916b707869a5694d2b4f7cf8a93/output/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/parkjaemin/.android/build-cache/f2edd761d2ced687c0fee68ebbd18c1dcb28a0cf/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/parkjaemin/.android/build-cache/3374be14ad36846a04730ff5d2762e5036ea93bf/output/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/parkjaemin/.android/build-cache/0487eff7959965bd3b4fef945c552f6522a7290c/output/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.3.1] /Users/parkjaemin/.android/build-cache/a1a78193d94c90010901ce1e7cad09f237a16d18/output/AndroidManifest.xml:20:5-44
-MERGED from [com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.0] /Users/parkjaemin/.android/build-cache/3c4147d13a74cfae504be1ba5ae3ede64ec00ab5/output/AndroidManifest.xml:8:5-10:41
-MERGED from [com.google.firebase:firebase-core:10.2.6] /Users/parkjaemin/.android/build-cache/34f1561f9bdf9a2a8054bd23b7b260bf89b4445c/output/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-analytics:10.2.6] /Users/parkjaemin/.android/build-cache/cb627eb38ae3bfe9890117312fb38fe2c0cb46b0/output/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] /Users/parkjaemin/.android/build-cache/1bb303abdee550209f988970eabd56387116577f/output/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-common:10.2.6] /Users/parkjaemin/.android/build-cache/8a6735f92b617c4fd37275b3c51553bf021b94ab/output/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-tasks:10.2.6] /Users/parkjaemin/.android/build-cache/06ae64cf8d95defd16c45f6b024d136f40048e76/output/AndroidManifest.xml:3:5-43
-MERGED from [com.google.android.gms:play-services-basement:10.2.6] /Users/parkjaemin/.android/build-cache/eb785a4c23fbd9098e00f13429511259d7c693f2/output/AndroidManifest.xml:17:5-43
-MERGED from [com.android.support:support-v4:25.3.1] /Users/parkjaemin/.android/build-cache/55ca5767c4302cdaca3753f2b62f9c19d20f9718/output/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.3.1] /Users/parkjaemin/.android/build-cache/79e6d609856f442604318024d098303aa8f8daa3/output/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.3.1] /Users/parkjaemin/.android/build-cache/a76e030fbc0d181e67d3eba3a04b0dc8a1732c5e/output/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.3.1] /Users/parkjaemin/.android/build-cache/7e1e0b0e19b9c31cfc039fb7fc7089e973704065/output/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.3.1] /Users/parkjaemin/.android/build-cache/5a564507efeafa440cd5c1f2e4bd9e5825f3a50f/output/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.3.1] /Users/parkjaemin/.android/build-cache/00f3c3f5332f2f6db8eeab0b49a3c2532425d78a/output/AndroidManifest.xml:21:5-23:58
+INJECTED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ABCla\.android\build-cache\5b3cf7f1b2aa1ce0f663979913a1049645baa093\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\ABCla\.android\build-cache\607e6fdebc6d9337803f7cdf4540dd4a17851cf8\output\AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:design:25.3.1] C:\Users\ABCla\.android\build-cache\fee67500d19a7af19a39f7e8af394eb1a442b376\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\ABCla\.android\build-cache\d6530cbb2e6f11a662e1ad0bb7c46a81f166cff7\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\ABCla\.android\build-cache\640e8ae03035df15462f8039e0d6a79157eec3d2\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\ABCla\.android\build-cache\2b2e3f7b380ca00f7d0c97ea044161133b53ea6d\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\ABCla\.android\build-cache\a34f0b6b62bc1e34c8b7692975a0226e19b1923c\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] C:\Users\ABCla\.android\build-cache\3394f1b4f47a217b0bfea4e4e2023808cd493efa\output\AndroidManifest.xml:20:5-44
+MERGED from [com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.0] C:\Users\ABCla\.android\build-cache\34b1016c20d61db668c59f18c9aba74cca66d609\output\AndroidManifest.xml:8:5-10:41
+MERGED from [com.google.firebase:firebase-core:10.2.6] C:\Users\ABCla\.android\build-cache\3cafce6cd9ed0587759b87a2350a5972986a30fe\output\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\ABCla\.android\build-cache\e70eb116f8e010889f7a2fc44e07f2855763ee8c\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] C:\Users\ABCla\.android\build-cache\7b1874b3e225a8a460b1a287da1987b3560d3bfd\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-common:10.2.6] C:\Users\ABCla\.android\build-cache\569fa3c85b7c3738d1a9aca0f21fd68dd09d7511\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:10.2.6] C:\Users\ABCla\.android\build-cache\f3a295f0b3a1dac70b9d317979074c1490bfd8c0\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:10.2.6] C:\Users\ABCla\.android\build-cache\da315e90947ed4e3b9c3cbf203ac47d3ca690386\output\AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\ABCla\.android\build-cache\fbc62ec07f074dba660d942780e5cfa15b097c06\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\ABCla\.android\build-cache\edace8ce06860283c3e9a43a3e2f4e0826b82ecf\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\ABCla\.android\build-cache\842d821d94046f54661e41dabba2b1f56a65dc01\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\ABCla\.android\build-cache\e3e98490a2f4ba89957ff867ff01e1d6d321b46a\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\ABCla\.android\build-cache\1eaa275fee38621135ebd31eea91bb557add1c36\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\ABCla\.android\build-cache\7a309b323acee76633297d006fb68a1ad72ec04b\output\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.3.1] /Users/parkjaemin/.android/build-cache/776ad56ab3132916b707869a5694d2b4f7cf8a93/output/AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.3.1] C:\Users\ABCla\.android\build-cache\fee67500d19a7af19a39f7e8af394eb1a442b376\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ABCla\Desktop\takeit_store\app\src\main\AndroidManifest.xml
 service#com.google.firebase.messaging.FirebaseMessagingService
-ADDED from [com.google.firebase:firebase-messaging:10.2.6] /Users/parkjaemin/.android/build-cache/94261e1b30b3fa1094d87148f5ed7bd6d2fd24a0/output/AndroidManifest.xml:23:9-27:19
+ADDED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\ABCla\.android\build-cache\607e6fdebc6d9337803f7cdf4540dd4a17851cf8\output\AndroidManifest.xml:23:9-27:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-messaging:10.2.6] /Users/parkjaemin/.android/build-cache/94261e1b30b3fa1094d87148f5ed7bd6d2fd24a0/output/AndroidManifest.xml:23:88-111
+		ADDED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\ABCla\.android\build-cache\607e6fdebc6d9337803f7cdf4540dd4a17851cf8\output\AndroidManifest.xml:23:88-111
 	android:name
-		ADDED from [com.google.firebase:firebase-messaging:10.2.6] /Users/parkjaemin/.android/build-cache/94261e1b30b3fa1094d87148f5ed7bd6d2fd24a0/output/AndroidManifest.xml:23:18-87
+		ADDED from [com.google.firebase:firebase-messaging:10.2.6] C:\Users\ABCla\.android\build-cache\607e6fdebc6d9337803f7cdf4540dd4a17851cf8\output\AndroidManifest.xml:23:18-87
 meta-data#android.support.VERSION
-ADDED from [com.android.support:design:25.3.1] /Users/parkjaemin/.android/build-cache/776ad56ab3132916b707869a5694d2b4f7cf8a93/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/parkjaemin/.android/build-cache/f2edd761d2ced687c0fee68ebbd18c1dcb28a0cf/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/parkjaemin/.android/build-cache/3374be14ad36846a04730ff5d2762e5036ea93bf/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/parkjaemin/.android/build-cache/0487eff7959965bd3b4fef945c552f6522a7290c/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:transition:25.3.1] /Users/parkjaemin/.android/build-cache/a1a78193d94c90010901ce1e7cad09f237a16d18/output/AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-v4:25.3.1] /Users/parkjaemin/.android/build-cache/55ca5767c4302cdaca3753f2b62f9c19d20f9718/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] /Users/parkjaemin/.android/build-cache/79e6d609856f442604318024d098303aa8f8daa3/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] /Users/parkjaemin/.android/build-cache/a76e030fbc0d181e67d3eba3a04b0dc8a1732c5e/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] /Users/parkjaemin/.android/build-cache/7e1e0b0e19b9c31cfc039fb7fc7089e973704065/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] /Users/parkjaemin/.android/build-cache/5a564507efeafa440cd5c1f2e4bd9e5825f3a50f/output/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] /Users/parkjaemin/.android/build-cache/00f3c3f5332f2f6db8eeab0b49a3c2532425d78a/output/AndroidManifest.xml:25:5-27:34
+ADDED from [com.android.support:design:25.3.1] C:\Users\ABCla\.android\build-cache\fee67500d19a7af19a39f7e8af394eb1a442b376\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\ABCla\.android\build-cache\d6530cbb2e6f11a662e1ad0bb7c46a81f166cff7\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\ABCla\.android\build-cache\640e8ae03035df15462f8039e0d6a79157eec3d2\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\ABCla\.android\build-cache\2b2e3f7b380ca00f7d0c97ea044161133b53ea6d\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\ABCla\.android\build-cache\a34f0b6b62bc1e34c8b7692975a0226e19b1923c\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] C:\Users\ABCla\.android\build-cache\3394f1b4f47a217b0bfea4e4e2023808cd493efa\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\ABCla\.android\build-cache\fbc62ec07f074dba660d942780e5cfa15b097c06\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\ABCla\.android\build-cache\edace8ce06860283c3e9a43a3e2f4e0826b82ecf\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\ABCla\.android\build-cache\842d821d94046f54661e41dabba2b1f56a65dc01\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\ABCla\.android\build-cache\e3e98490a2f4ba89957ff867ff01e1d6d321b46a\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\ABCla\.android\build-cache\1eaa275fee38621135ebd31eea91bb557add1c36\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\ABCla\.android\build-cache\7a309b323acee76633297d006fb68a1ad72ec04b\output\AndroidManifest.xml:25:5-27:34
 	android:value
-		ADDED from [com.android.support:design:25.3.1] /Users/parkjaemin/.android/build-cache/776ad56ab3132916b707869a5694d2b4f7cf8a93/output/AndroidManifest.xml:27:9-31
+		ADDED from [com.android.support:design:25.3.1] C:\Users\ABCla\.android\build-cache\fee67500d19a7af19a39f7e8af394eb1a442b376\output\AndroidManifest.xml:27:9-31
 	android:name
-		ADDED from [com.android.support:design:25.3.1] /Users/parkjaemin/.android/build-cache/776ad56ab3132916b707869a5694d2b4f7cf8a93/output/AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:design:25.3.1] C:\Users\ABCla\.android\build-cache\fee67500d19a7af19a39f7e8af394eb1a442b376\output\AndroidManifest.xml:26:9-47
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/parkjaemin/.android/build-cache/cb627eb38ae3bfe9890117312fb38fe2c0cb46b0/output/AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] /Users/parkjaemin/.android/build-cache/1bb303abdee550209f988970eabd56387116577f/output/AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:21:5-67
+ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\ABCla\.android\build-cache\e70eb116f8e010889f7a2fc44e07f2855763ee8c\output\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] C:\Users\ABCla\.android\build-cache\7b1874b3e225a8a460b1a287da1987b3560d3bfd\output\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:21:5-67
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/parkjaemin/.android/build-cache/cb627eb38ae3bfe9890117312fb38fe2c0cb46b0/output/AndroidManifest.xml:22:22-65
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\ABCla\.android\build-cache\e70eb116f8e010889f7a2fc44e07f2855763ee8c\output\AndroidManifest.xml:22:22-65
 receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/parkjaemin/.android/build-cache/cb627eb38ae3bfe9890117312fb38fe2c0cb46b0/output/AndroidManifest.xml:25:7-26:18
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] /Users/parkjaemin/.android/build-cache/1bb303abdee550209f988970eabd56387116577f/output/AndroidManifest.xml:25:7-26:18
+ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\ABCla\.android\build-cache\e70eb116f8e010889f7a2fc44e07f2855763ee8c\output\AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] C:\Users\ABCla\.android\build-cache\7b1874b3e225a8a460b1a287da1987b3560d3bfd\output\AndroidManifest.xml:25:7-26:18
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/parkjaemin/.android/build-cache/cb627eb38ae3bfe9890117312fb38fe2c0cb46b0/output/AndroidManifest.xml:25:90-112
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\ABCla\.android\build-cache\e70eb116f8e010889f7a2fc44e07f2855763ee8c\output\AndroidManifest.xml:25:90-112
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/parkjaemin/.android/build-cache/cb627eb38ae3bfe9890117312fb38fe2c0cb46b0/output/AndroidManifest.xml:25:113-137
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\ABCla\.android\build-cache\e70eb116f8e010889f7a2fc44e07f2855763ee8c\output\AndroidManifest.xml:25:113-137
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/parkjaemin/.android/build-cache/cb627eb38ae3bfe9890117312fb38fe2c0cb46b0/output/AndroidManifest.xml:25:17-89
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\ABCla\.android\build-cache\e70eb116f8e010889f7a2fc44e07f2855763ee8c\output\AndroidManifest.xml:25:17-89
 receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
-ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/parkjaemin/.android/build-cache/cb627eb38ae3bfe9890117312fb38fe2c0cb46b0/output/AndroidManifest.xml:27:7-31:18
+ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\ABCla\.android\build-cache\e70eb116f8e010889f7a2fc44e07f2855763ee8c\output\AndroidManifest.xml:27:7-31:18
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/parkjaemin/.android/build-cache/cb627eb38ae3bfe9890117312fb38fe2c0cb46b0/output/AndroidManifest.xml:27:162-184
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\ABCla\.android\build-cache\e70eb116f8e010889f7a2fc44e07f2855763ee8c\output\AndroidManifest.xml:27:162-184
 	android:permission
-		ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/parkjaemin/.android/build-cache/cb627eb38ae3bfe9890117312fb38fe2c0cb46b0/output/AndroidManifest.xml:27:105-161
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\ABCla\.android\build-cache\e70eb116f8e010889f7a2fc44e07f2855763ee8c\output\AndroidManifest.xml:27:105-161
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/parkjaemin/.android/build-cache/cb627eb38ae3bfe9890117312fb38fe2c0cb46b0/output/AndroidManifest.xml:27:17-104
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\ABCla\.android\build-cache\e70eb116f8e010889f7a2fc44e07f2855763ee8c\output\AndroidManifest.xml:27:17-104
 intent-filter#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/parkjaemin/.android/build-cache/cb627eb38ae3bfe9890117312fb38fe2c0cb46b0/output/AndroidManifest.xml:28:11-30:27
+ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\ABCla\.android\build-cache\e70eb116f8e010889f7a2fc44e07f2855763ee8c\output\AndroidManifest.xml:28:11-30:27
 action#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/parkjaemin/.android/build-cache/cb627eb38ae3bfe9890117312fb38fe2c0cb46b0/output/AndroidManifest.xml:29:15-76
+ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\ABCla\.android\build-cache\e70eb116f8e010889f7a2fc44e07f2855763ee8c\output\AndroidManifest.xml:29:15-76
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/parkjaemin/.android/build-cache/cb627eb38ae3bfe9890117312fb38fe2c0cb46b0/output/AndroidManifest.xml:29:23-74
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\ABCla\.android\build-cache\e70eb116f8e010889f7a2fc44e07f2855763ee8c\output\AndroidManifest.xml:29:23-74
 service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/parkjaemin/.android/build-cache/cb627eb38ae3bfe9890117312fb38fe2c0cb46b0/output/AndroidManifest.xml:32:7-137
-MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] /Users/parkjaemin/.android/build-cache/1bb303abdee550209f988970eabd56387116577f/output/AndroidManifest.xml:27:7-137
+ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\ABCla\.android\build-cache\e70eb116f8e010889f7a2fc44e07f2855763ee8c\output\AndroidManifest.xml:32:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] C:\Users\ABCla\.android\build-cache\7b1874b3e225a8a460b1a287da1987b3560d3bfd\output\AndroidManifest.xml:27:7-137
 	android:enabled
-		ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/parkjaemin/.android/build-cache/cb627eb38ae3bfe9890117312fb38fe2c0cb46b0/output/AndroidManifest.xml:32:88-110
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\ABCla\.android\build-cache\e70eb116f8e010889f7a2fc44e07f2855763ee8c\output\AndroidManifest.xml:32:88-110
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/parkjaemin/.android/build-cache/cb627eb38ae3bfe9890117312fb38fe2c0cb46b0/output/AndroidManifest.xml:32:111-135
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\ABCla\.android\build-cache\e70eb116f8e010889f7a2fc44e07f2855763ee8c\output\AndroidManifest.xml:32:111-135
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/parkjaemin/.android/build-cache/cb627eb38ae3bfe9890117312fb38fe2c0cb46b0/output/AndroidManifest.xml:32:16-87
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] C:\Users\ABCla\.android\build-cache\e70eb116f8e010889f7a2fc44e07f2855763ee8c\output\AndroidManifest.xml:32:16-87
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:22:5-81
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:22:5-81
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:22:22-79
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:22:22-79
 permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:24:5-109
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:24:5-109
 	android:protectionLevel
-		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:24:72-107
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:24:72-107
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:24:17-71
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:24:17-71
 uses-permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:26:5-78
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:26:5-78
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:26:22-76
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:26:22-76
 receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
-ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:30:9-35:20
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:30:9-35:20
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:30:85-108
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:30:85-108
 	android:permission
-		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:30:109-169
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:30:109-169
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:30:19-84
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:30:19-84
 intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:31:13-34:29
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:31:13-34:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:32:17-80
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:32:17-80
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:32:25-78
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:32:25-78
 category#${applicationId}
-ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:33:17-60
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:33:17-60
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:33:27-58
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:33:27-58
 receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
-ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:39:9-119
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:39:9-119
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:39:93-117
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:39:93-117
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:39:19-92
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:39:19-92
 service#com.google.firebase.iid.FirebaseInstanceIdService
-ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:43:9-47:19
+ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:43:9-47:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:43:83-106
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:43:83-106
 	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/parkjaemin/.android/build-cache/6587756c0d2ca8835d98e37cabbeae4117f808ac/output/AndroidManifest.xml:43:18-82
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] C:\Users\ABCla\.android\build-cache\c1d6739af5e48a574565ee014430d340c9fa8146\output\AndroidManifest.xml:43:18-82
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:10.2.6] /Users/parkjaemin/.android/build-cache/8a6735f92b617c4fd37275b3c51553bf021b94ab/output/AndroidManifest.xml:6:9-194
+ADDED from [com.google.firebase:firebase-common:10.2.6] C:\Users\ABCla\.android\build-cache\569fa3c85b7c3738d1a9aca0f21fd68dd09d7511\output\AndroidManifest.xml:6:9-194
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:10.2.6] /Users/parkjaemin/.android/build-cache/8a6735f92b617c4fd37275b3c51553bf021b94ab/output/AndroidManifest.xml:6:19-78
+		ADDED from [com.google.firebase:firebase-common:10.2.6] C:\Users\ABCla\.android\build-cache\569fa3c85b7c3738d1a9aca0f21fd68dd09d7511\output\AndroidManifest.xml:6:19-78
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:10.2.6] /Users/parkjaemin/.android/build-cache/8a6735f92b617c4fd37275b3c51553bf021b94ab/output/AndroidManifest.xml:6:144-168
+		ADDED from [com.google.firebase:firebase-common:10.2.6] C:\Users\ABCla\.android\build-cache\569fa3c85b7c3738d1a9aca0f21fd68dd09d7511\output\AndroidManifest.xml:6:144-168
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:10.2.6] /Users/parkjaemin/.android/build-cache/8a6735f92b617c4fd37275b3c51553bf021b94ab/output/AndroidManifest.xml:6:169-192
+		ADDED from [com.google.firebase:firebase-common:10.2.6] C:\Users\ABCla\.android\build-cache\569fa3c85b7c3738d1a9aca0f21fd68dd09d7511\output\AndroidManifest.xml:6:169-192
 	android:name
-		ADDED from [com.google.firebase:firebase-common:10.2.6] /Users/parkjaemin/.android/build-cache/8a6735f92b617c4fd37275b3c51553bf021b94ab/output/AndroidManifest.xml:6:79-143
+		ADDED from [com.google.firebase:firebase-common:10.2.6] C:\Users\ABCla\.android\build-cache\569fa3c85b7c3738d1a9aca0f21fd68dd09d7511\output\AndroidManifest.xml:6:79-143
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:10.2.6] /Users/parkjaemin/.android/build-cache/eb785a4c23fbd9098e00f13429511259d7c693f2/output/AndroidManifest.xml:20:9-121
+ADDED from [com.google.android.gms:play-services-basement:10.2.6] C:\Users\ABCla\.android\build-cache\da315e90947ed4e3b9c3cbf203ac47d3ca690386\output\AndroidManifest.xml:20:9-121
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:10.2.6] /Users/parkjaemin/.android/build-cache/eb785a4c23fbd9098e00f13429511259d7c693f2/output/AndroidManifest.xml:20:66-119
+		ADDED from [com.google.android.gms:play-services-basement:10.2.6] C:\Users\ABCla\.android\build-cache\da315e90947ed4e3b9c3cbf203ac47d3ca690386\output\AndroidManifest.xml:20:66-119
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:10.2.6] /Users/parkjaemin/.android/build-cache/eb785a4c23fbd9098e00f13429511259d7c693f2/output/AndroidManifest.xml:20:20-65
+		ADDED from [com.google.android.gms:play-services-basement:10.2.6] C:\Users\ABCla\.android\build-cache\da315e90947ed4e3b9c3cbf203ac47d3ca690386\output\AndroidManifest.xml:20:20-65

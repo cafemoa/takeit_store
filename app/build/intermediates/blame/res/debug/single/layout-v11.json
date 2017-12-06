@@ -1,26 +1,50 @@
 [
     {
-        "merged": "/Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media.xml",
-        "source": "/Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/res/layout-v11/notification_template_big_media.xml"
+        "merged": "C:\\Users\\ABCla\\Desktop\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_custom.xml",
+        "source": "C:\\Users\\ABCla\\.android\\build-cache\\d6530cbb2e6f11a662e1ad0bb7c46a81f166cff7\\output\\res\\layout-v11\\notification_template_big_media_custom.xml"
     },
     {
-        "merged": "/Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_custom.xml",
-        "source": "/Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/res/layout-v11/notification_template_big_media_custom.xml"
+        "merged": "C:\\Users\\parkjaemin\\Desktop\\TakeIt\\Takeit_store\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\parkjaemin\\.android\\build-cache\\eb5d92a4bc48ec44b5006734f4ac3695214efdd7\\output\\res\\layout-v11\\notification_media_cancel_action.xml"
     },
     {
-        "merged": "/Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/build/intermediates/res/merged/debug/layout-v11/notification_media_action.xml",
-        "source": "/Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/res/layout-v11/notification_media_action.xml"
+        "merged": "C:\\Users\\parkjaemin\\Desktop\\TakeIt\\Takeit_store\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_action.xml",
+        "source": "C:\\Users\\parkjaemin\\.android\\build-cache\\eb5d92a4bc48ec44b5006734f4ac3695214efdd7\\output\\res\\layout-v11\\notification_media_action.xml"
     },
     {
-        "merged": "/Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/build/intermediates/res/merged/debug/layout-v11/notification_media_cancel_action.xml",
-        "source": "/Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/res/layout-v11/notification_media_cancel_action.xml"
+        "merged": "C:\\Users\\ABCla\\Desktop\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\ABCla\\.android\\build-cache\\d6530cbb2e6f11a662e1ad0bb7c46a81f166cff7\\output\\res\\layout-v11\\notification_media_cancel_action.xml"
     },
     {
-        "merged": "/Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow.xml",
-        "source": "/Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/res/layout-v11/notification_template_big_media_narrow.xml"
+        "merged": "C:\\Users\\ABCla\\Desktop\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow_custom.xml",
+        "source": "C:\\Users\\ABCla\\.android\\build-cache\\d6530cbb2e6f11a662e1ad0bb7c46a81f166cff7\\output\\res\\layout-v11\\notification_template_big_media_narrow_custom.xml"
     },
     {
-        "merged": "/Users/parkjaemin/Desktop/TakeIt/Takeit_store/takeit_store/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow_custom.xml",
-        "source": "/Users/parkjaemin/.android/build-cache/eb5d92a4bc48ec44b5006734f4ac3695214efdd7/output/res/layout-v11/notification_template_big_media_narrow_custom.xml"
+        "merged": "C:\\Users\\parkjaemin\\Desktop\\TakeIt\\Takeit_store\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_custom.xml",
+        "source": "C:\\Users\\parkjaemin\\.android\\build-cache\\eb5d92a4bc48ec44b5006734f4ac3695214efdd7\\output\\res\\layout-v11\\notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\parkjaemin\\Desktop\\TakeIt\\Takeit_store\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow_custom.xml",
+        "source": "C:\\Users\\parkjaemin\\.android\\build-cache\\eb5d92a4bc48ec44b5006734f4ac3695214efdd7\\output\\res\\layout-v11\\notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\ABCla\\Desktop\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow.xml",
+        "source": "C:\\Users\\ABCla\\.android\\build-cache\\d6530cbb2e6f11a662e1ad0bb7c46a81f166cff7\\output\\res\\layout-v11\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\parkjaemin\\Desktop\\TakeIt\\Takeit_store\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow.xml",
+        "source": "C:\\Users\\parkjaemin\\.android\\build-cache\\eb5d92a4bc48ec44b5006734f4ac3695214efdd7\\output\\res\\layout-v11\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\ABCla\\Desktop\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_action.xml",
+        "source": "C:\\Users\\ABCla\\.android\\build-cache\\d6530cbb2e6f11a662e1ad0bb7c46a81f166cff7\\output\\res\\layout-v11\\notification_media_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\parkjaemin\\Desktop\\TakeIt\\Takeit_store\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media.xml",
+        "source": "C:\\Users\\parkjaemin\\.android\\build-cache\\eb5d92a4bc48ec44b5006734f4ac3695214efdd7\\output\\res\\layout-v11\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\ABCla\\Desktop\\takeit_store\\app\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media.xml",
+        "source": "C:\\Users\\ABCla\\.android\\build-cache\\d6530cbb2e6f11a662e1ad0bb7c46a81f166cff7\\output\\res\\layout-v11\\notification_template_big_media.xml"
     }
 ]
