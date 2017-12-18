@@ -29,7 +29,7 @@
             android:layout_gravity="center"
             android:background="@drawable/item_rounded_button"
             android:textColor="#f04136"
-            android:text="돈 벌자~" />
+            android:text="영업시작" />
 
     </LinearLayout>
 
