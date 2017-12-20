@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity
 
         setContentView(R.layout.activity_main);
         startNavigation();
-        
+
         Intent intent=getIntent();
         int minTime=intent.getIntExtra("MinTime",0);
 

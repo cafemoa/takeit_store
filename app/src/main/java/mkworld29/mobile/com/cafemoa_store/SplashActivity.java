@@ -41,7 +41,7 @@ public class SplashActivity extends AppCompatActivity {
             int version = pi.versionCode;
             int old_ver = pref.getInt("version", 0);
 
-            if(true) {
+            if(old_ver < version) {
                 SharedPreferences.Editor edit = pref.edit();
                 edit.putInt("version",  version);
                 edit.commit();
