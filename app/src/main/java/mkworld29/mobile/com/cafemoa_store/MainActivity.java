@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity
     OrderListAdapter adapter = null;
     Retrofit retrofit;
     EditText et_min_time;
+    Button closeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,16 +55,46 @@ public class MainActivity extends AppCompatActivity
 
         setContentView(R.layout.activity_main);
         startNavigation();
+        
+        Intent intent=getIntent();
+        int minTime=intent.getIntExtra("MinTime",0);
 
         new Timer().scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
                 getData();
-                Log.d("=====MAINACTIVITY=====","띠링띠링");
             }
         },500,10000);
 
+        closeButton=(Button)findViewById(R.id.set_open);
+        closeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RetrofitConnection.set_Open service = retrofit.create(RetrofitConnection.set_Open.class);
+                Call<ResponseBody> repos = service.repoContributors(0);
+                repos.enqueue(new Callback<ResponseBody>() {
+                    @Override
+                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                        if (response.code() == 200) {
+                            Intent intent=new Intent(MainActivity.this,StartActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                        else{
+                            Toast.makeText(getApplicationContext(), "통신 에러 발생", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<ResponseBody> call, Throwable t) {
+                        Log.d("TAG", t.getLocalizedMessage());
+                    }
+                });
+            }
+        });
+
         et_min_time=(EditText)findViewById(R.id.et_min_time);
+        et_min_time.setText(""+minTime);
 
         et_min_time.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -101,17 +132,6 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
 
         lv_order = (ListView) findViewById(R.id.lv_order);
 

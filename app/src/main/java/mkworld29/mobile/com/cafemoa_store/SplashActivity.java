@@ -1,6 +1,7 @@
 package mkworld29.mobile.com.cafemoa_store;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
@@ -9,7 +10,20 @@ import android.os.Handler;
 import android.support.annotation.RequiresPermission;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Toast;
+
+import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitConnection;
+import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitInstance;
+import mkworld29.mobile.com.cafemoa_store.retrofit.SharedPreference;
+import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitConnection.Cafe;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -51,8 +65,15 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 // This method will be executed once the timer is over
                 // Start your app main activity
-                Intent i = new Intent(SplashActivity.this, MainActivity.class);
-                startActivity(i);
+
+                if(!SharedPreference.getInstance(getApplicationContext()).get("Authorization").equals("")){
+                    Intent i = new Intent(SplashActivity.this, StartActivity.class);
+                    startActivity(i);
+                }
+                else {
+                    Intent i = new Intent(SplashActivity.this, LoginActivity.class);
+                    startActivity(i);
+                }
 
                 // close this activity
                 finish();

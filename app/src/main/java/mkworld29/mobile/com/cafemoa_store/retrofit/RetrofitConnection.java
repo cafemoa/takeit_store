@@ -50,6 +50,11 @@ public class RetrofitConnection {
         public List<Option> options;
     }
 
+    public class Cafe{
+        public boolean is_open;
+        public int min_time;
+    }
+
     public interface login {
         @FormUrlEncoded
         @POST("api-auth/")
@@ -87,5 +92,18 @@ public class RetrofitConnection {
         Call<ResponseBody> repoContributors(
                 @Field("min_time") int min_time
         );
+    }
+
+    public interface set_Open{
+        @FormUrlEncoded
+        @POST("set_open/")
+        Call<ResponseBody> repoContributors(
+                @Field("is_open") int is_open
+        );
+    }
+
+    public interface getCafeInfo{
+        @GET("cafe_info/")
+        Call<Cafe> repoContributors();
     }
 }
