@@ -1,7 +1,9 @@
 package mkworld29.mobile.com.cafemoa_store;
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_main);
-
+        startNavigation();
 
         new Timer().scheduleAtFixedRate(new TimerTask() {
             @Override
@@ -149,6 +151,43 @@ public class MainActivity extends AppCompatActivity
         super.onRestart();
 
     }
+
+
+    private void startNavigation()
+    {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.getMenu().close();
+        setSupportActionBar(toolbar);
+
+        final ActionBar ab = getSupportActionBar();
+        ab.setDisplayShowHomeEnabled(false);
+        ab.setDisplayHomeAsUpEnabled(false);
+        ab.setDisplayShowCustomEnabled(false);
+        ab.setDisplayShowTitleEnabled(false);
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        //drawer.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.menu_bar,getTheme()));
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        View hView = navigationView.getHeaderView(0);
+        navigationView.setNavigationItemSelectedListener(this);
+
+//        ImageView iv_set_up = (ImageView) hView.findViewById(R.id.iv_set_up);
+//        iv_set_up.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, SettingActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+
+    }
+
 
     private void getData()
     {
@@ -251,17 +290,10 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_quit) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+            finish();
+        } else if (id == R.id.nav_help) {
 
         }
 
@@ -269,6 +301,9 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+
 
     private Boolean isNetWork(){
         ConnectivityManager manager = (ConnectivityManager) getSystemService (Context.CONNECTIVITY_SERVICE);

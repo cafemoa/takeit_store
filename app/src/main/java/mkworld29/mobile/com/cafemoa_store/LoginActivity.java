@@ -1,11 +1,14 @@
 package mkworld29.mobile.com.cafemoa_store;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -29,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText username;
     EditText password;
     Retrofit retrofit;
+    CheckBox chk_auto_login;
     SharedPreference sp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +41,14 @@ public class LoginActivity extends AppCompatActivity {
         FirebaseApp.initializeApp(getApplicationContext());
         FirebaseInstanceId.getInstance().getToken();
 
+        int color = Color.parseColor("#ff0000");
+
         username=(EditText) findViewById(R.id.username);
         password=(EditText) findViewById(R.id.password);
+        chk_auto_login = (CheckBox) findViewById(R.id.chk_auto_login);
+
+        username.getBackground().setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
+        password.getBackground().setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
         retrofit= RetrofitInstance.getInstance(getApplicationContext());
         sp= SharedPreference.getInstance(getApplicationContext());
     }
@@ -55,6 +65,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<RetrofitConnection.Token> call, Response<RetrofitConnection.Token> response) {
                 if (response.code() == 200) {
                     sp.put("Authorization", response.body().token);
+                    if(chk_auto_login.isChecked()) sp.put("Auto_Login", "y");
+                    else sp.put("Auto_Login","n");
                     send_fcmtoken();
                 }
                 else{
