@@ -66,7 +66,8 @@ public class SplashActivity extends AppCompatActivity {
                 // This method will be executed once the timer is over
                 // Start your app main activity
 
-                if(!SharedPreference.getInstance(getApplicationContext()).get("Authorization").equals("")){
+                if(!SharedPreference.getInstance(getApplicationContext()).get("Authorization").equals("") &&
+                        SharedPreference.getInstance(getApplicationContext()).get("AUTO").equals("Y")){
                     Intent i = new Intent(SplashActivity.this, StartActivity.class);
                     startActivity(i);
                 }

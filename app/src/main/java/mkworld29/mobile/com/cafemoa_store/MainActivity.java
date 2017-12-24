@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity
     OrderListAdapter adapter = null;
     Retrofit retrofit;
     EditText et_min_time;
-    Button closeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,32 +65,7 @@ public class MainActivity extends AppCompatActivity
             }
         },500,10000);
 
-        closeButton=(Button)findViewById(R.id.set_open);
-        closeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                RetrofitConnection.set_Open service = retrofit.create(RetrofitConnection.set_Open.class);
-                Call<ResponseBody> repos = service.repoContributors(0);
-                repos.enqueue(new Callback<ResponseBody>() {
-                    @Override
-                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                        if (response.code() == 200) {
-                            Intent intent=new Intent(MainActivity.this,StartActivity.class);
-                            startActivity(intent);
-                            finish();
-                        }
-                        else{
-                            Toast.makeText(getApplicationContext(), "통신 에러 발생", Toast.LENGTH_SHORT).show();
-                        }
-                    }
 
-                    @Override
-                    public void onFailure(Call<ResponseBody> call, Throwable t) {
-                        Log.d("TAG", t.getLocalizedMessage());
-                    }
-                });
-            }
-        });
 
         et_min_time=(EditText)findViewById(R.id.et_min_time);
         et_min_time.setText(""+minTime);
@@ -311,8 +285,26 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_quit) {
-            // Handle the camera action
-            finish();
+            RetrofitConnection.set_Open service = retrofit.create(RetrofitConnection.set_Open.class);
+            Call<ResponseBody> repos = service.repoContributors(0);
+            repos.enqueue(new Callback<ResponseBody>() {
+                @Override
+                public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                    if (response.code() == 200) {
+                        Intent intent=new Intent(MainActivity.this,StartActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(), "통신 에러 발생", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<ResponseBody> call, Throwable t) {
+                    Log.d("TAG", t.getLocalizedMessage());
+                }
+            });
         } else if (id == R.id.nav_help) {
 
         }

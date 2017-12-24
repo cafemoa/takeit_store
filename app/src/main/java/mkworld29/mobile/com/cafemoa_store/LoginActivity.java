@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -46,6 +47,17 @@ public class LoginActivity extends AppCompatActivity {
         username=(EditText) findViewById(R.id.username);
         password=(EditText) findViewById(R.id.password);
         chk_auto_login = (CheckBox) findViewById(R.id.chk_auto_login);
+        chk_auto_login=(CheckBox) findViewById(R.id.chk_auto_login);
+        if(SharedPreference.getInstance(getApplicationContext()).get("AUTO").equals("Y"))
+            chk_auto_login.setChecked(true);
+
+        chk_auto_login.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                SharedPreference.getInstance(getApplicationContext()).put("AUTO", b? "Y" : "N");
+            }
+        });
+
 
         username.getBackground().setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
         password.getBackground().setColorFilter(color, PorterDuff.Mode.SRC_ATOP);
