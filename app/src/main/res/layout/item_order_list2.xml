@@ -5,7 +5,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@android:drawable/dialog_holo_light_frame"
     android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp">
+    android:layout_marginRight="10dp"
+
+    >
 
     <com.chauthai.swipereveallayout.SwipeRevealLayout
         android:id="@+id/srl_order"
@@ -31,7 +33,7 @@
                 android:textColor="#fcfcfc"
                 android:text="완료"/>
 
-            </FrameLayout>
+        </FrameLayout>
 
         <!-- Your main layout here -->
         <FrameLayout
