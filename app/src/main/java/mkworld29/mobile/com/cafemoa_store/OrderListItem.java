@@ -7,12 +7,12 @@ package mkworld29.mobile.com.cafemoa_store;
 public class OrderListItem {
 
     private String content;
-    private CoffeOption option;
+    private CoffeeOption option;
     private int wait_time;
     private int order_number;
     private int beverage_pk;
 
-    public OrderListItem(String content, int wait_time, int order_number, CoffeOption option,int beverage_pk)
+    public OrderListItem(String content, int wait_time, int order_number, CoffeeOption option, int beverage_pk)
     {
         this.content = content;
         this.wait_time = wait_time;
@@ -29,11 +29,11 @@ public class OrderListItem {
         this.content = content;
     }
 
-    public CoffeOption getOption() {
+    public CoffeeOption getOption() {
         return option;
     }
 
-    public void setOption(CoffeOption option) {
+    public void setOption(CoffeeOption option) {
         this.option = option;
     }
 

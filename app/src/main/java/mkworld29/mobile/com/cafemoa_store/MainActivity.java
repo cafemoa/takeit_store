@@ -19,7 +19,6 @@ import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -207,7 +206,7 @@ public class MainActivity extends AppCompatActivity
 
                         for(int j=0; j<option_num; j++){
                             RetrofitConnection.Option toption=options.get(j);
-                            CoffeOption option = new CoffeOption(toption.shot_num,toption.size,toption.is_ice,toption.whipping_cream);
+                            CoffeeOption option = new CoffeeOption(toption.shot_num,toption.size,toption.is_ice,toption.whipping_cream);
 
                             adapter.addItem(toption.beverage_name, order.get_time, order.order_num,option,order.pk);
                         }

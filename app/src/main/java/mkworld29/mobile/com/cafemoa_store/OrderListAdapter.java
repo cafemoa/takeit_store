@@ -1,9 +1,6 @@
 package mkworld29.mobile.com.cafemoa_store;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.Typeface;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -12,16 +9,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.chauthai.swipereveallayout.SwipeRevealLayout;
 import com.chauthai.swipereveallayout.ViewBinderHelper;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -97,7 +90,7 @@ public class OrderListAdapter extends BaseAdapter {
         if(item!= null && binderHelper!=null){
             binderHelper.bind(holder.swipeLayout, item.toString());
 
-            CoffeOption option = listViewItemList.get(position).getOption();
+            CoffeeOption option = listViewItemList.get(position).getOption();
             String str_option = String.valueOf(option.getSize()) + "/";
 
             if(option.getSize() == 0)
@@ -181,7 +174,7 @@ public class OrderListAdapter extends BaseAdapter {
         return listViewItemList;
     }
 
-    public void addItem(String content, int wait_time, int order_number, CoffeOption option,int beverage_pk)
+    public void addItem(String content, int wait_time, int order_number, CoffeeOption option, int beverage_pk)
     {
         OrderListItem item = new OrderListItem(content, wait_time, order_number, option,beverage_pk);
         listViewItemList.add(item);

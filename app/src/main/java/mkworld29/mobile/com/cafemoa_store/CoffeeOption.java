@@ -4,7 +4,7 @@ package mkworld29.mobile.com.cafemoa_store;
  * Created by parkjaemin on 2017. 11. 15..
  */
 
-public class CoffeOption {
+public class CoffeeOption {
 
     private int  shots;
     private int  size;
@@ -13,7 +13,7 @@ public class CoffeOption {
     private boolean is_whipping;
     private int pk;
 
-    public CoffeOption(int shots, int size, boolean is_cold, boolean is_whipping)
+    public CoffeeOption(int shots, int size, boolean is_cold, boolean is_whipping)
     {
 
         this.shots = shots;
