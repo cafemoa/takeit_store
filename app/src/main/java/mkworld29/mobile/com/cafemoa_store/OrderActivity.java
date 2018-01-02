@@ -28,8 +28,7 @@ public class OrderActivity extends AppCompatActivity implements SwipeRefreshLayo
     private OrderListAdapter adapter;
     private SwipeRefreshLayout mSwipeRefreshLayout;
 
-    final Vibrator vibrator;
-    
+    final Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
 
 
 
@@ -44,8 +43,6 @@ public class OrderActivity extends AppCompatActivity implements SwipeRefreshLayo
 
 
         lv_order_list = (ListView) findViewById(R.id.lv_order_list);
-
-        vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
 
         onRefresh();
     }
