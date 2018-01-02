@@ -1,5 +1,7 @@
 package mkworld29.mobile.com.cafemoa_store;
 
+import android.content.Context;
+import android.os.Vibrator;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,6 +27,10 @@ public class OrderActivity extends AppCompatActivity implements SwipeRefreshLayo
     private Retrofit retrofit;
     private OrderListAdapter adapter;
     private SwipeRefreshLayout mSwipeRefreshLayout;
+
+    final Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +77,11 @@ public class OrderActivity extends AppCompatActivity implements SwipeRefreshLayo
                             String whipping_cream="휘핑크림 : "+option.whipping_cream;
 
                             adapter.addItem(option.beverage_name,order_num,shots,is_ice,whipping_cream, order.pk);
+
+                            //진동과 토스트
+                            vibrator.vibrate(2000); //2초간 진동
+                            Toast.makeText(getApplicationContext(),"주문이 도착했습니다.",Toast.LENGTH_SHORT).show();
+
                         }
                     }
                     lv_order_list.setAdapter(adapter);
