@@ -1,11 +1,15 @@
 package mkworld29.mobile.com.cafemoa_store;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.os.Vibrator;
+import android.support.design.widget.BottomSheetDialog;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -43,6 +47,7 @@ public class OrderActivity extends AppCompatActivity implements SwipeRefreshLayo
 
 
         lv_order_list = (ListView) findViewById(R.id.lv_order_list);
+
 
         onRefresh();
     }

@@ -1,8 +1,10 @@
 package mkworld29.mobile.com.cafemoa_store;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.support.design.widget.BottomSheetDialog;
 import android.support.v7.app.ActionBar;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -108,17 +110,7 @@ public class MainActivity extends AppCompatActivity
 
         lv_order = (ListView) findViewById(R.id.lv_order);
 
-        lv_order.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
 
     }
 
@@ -212,6 +204,20 @@ public class MainActivity extends AppCompatActivity
                         }
                     }
                     lv_order.setAdapter(adapter);
+
+//                    lv_order.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//                        @Override
+//                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+////                            // TODO 아이템 클릭시에 구현할 내용은 여기에.
+////                            Dialog d = new BottomSheetDialog(getApplicationContext());
+////                            d.setContentView(R.layout.bottom_dialog);
+////                            d.setCancelable(true);
+////                            d.show();
+//                            Toast.makeText(getApplicationContext(), "on item clcik", Toast.LENGTH_SHORT).show();
+//                        }
+//
+//                    });
+
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "통신 에러 발생", Toast.LENGTH_SHORT).show();
