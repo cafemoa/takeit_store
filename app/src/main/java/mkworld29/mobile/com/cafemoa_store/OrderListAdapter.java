@@ -1,9 +1,11 @@
 package mkworld29.mobile.com.cafemoa_store;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
+import android.support.design.widget.BottomSheetDialog;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -28,8 +30,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
-
-import static android.content.ContentValues.TAG;
 
 /**
  * Created by parkjaemin on 2017. 11. 15..
@@ -66,7 +66,7 @@ public class OrderListAdapter extends BaseAdapter {
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
-    public View getView(final int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, final ViewGroup parent) {
         final Context context = parent.getContext();
         final ViewHolder holder;
 
@@ -83,9 +83,6 @@ public class OrderListAdapter extends BaseAdapter {
             holder.swipeLayout          =   (SwipeRevealLayout)convertView.findViewById(R.id.srl_order);
             holder.deleteView           =   convertView.findViewById(R.id.delete_view);
             holder.lv_is_three_min      =   (LinearLayout)convertView.findViewById(R.id.lv_is_three_min);
-            holder.cardView_root        =   (LinearLayout)convertView.findViewById(R.id.cardView_root);
-
-
 
 
             holder.tv_wait_time.setText("7");
@@ -152,20 +149,15 @@ public class OrderListAdapter extends BaseAdapter {
                 @Override
                 public boolean onTouch(View view, MotionEvent motionEvent) {
                     if(motionEvent.getAction()==MotionEvent.ACTION_DOWN) {
-                        Log.d("TAG", "SIBAL");
+                        Log.d("TAG", "onclick");
+
+                        Dialog d = new BottomSheetDialog(context);
+                        d.setContentView(R.layout.dialog_bottom);
+                        d.show();
                     }
                     return false;
                 }
             });
-
-
-            holder.cardView_root.setOnClickListener((new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Log.d("TAG","onclick");
-                }
-            }));
-
 
 
             holder.deleteView.setOnClickListener(new View.OnClickListener() {
@@ -238,15 +230,7 @@ public class OrderListAdapter extends BaseAdapter {
         private LinearLayout lv_is_three_min;
         private View deleteView;
         private SwipeRevealLayout swipeLayout;
-        private LinearLayout cardView_root;
 
-//
-//        private View.OnClickListener mMyLocalClickListener = new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Log.d(TAG,"onclick");
-//            }
-//        };
 
     }
 }

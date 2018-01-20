@@ -205,19 +205,6 @@ public class MainActivity extends AppCompatActivity
                     }
                     lv_order.setAdapter(adapter);
 
-//                    lv_order.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//                        @Override
-//                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-////                            // TODO 아이템 클릭시에 구현할 내용은 여기에.
-////                            Dialog d = new BottomSheetDialog(getApplicationContext());
-////                            d.setContentView(R.layout.bottom_dialog);
-////                            d.setCancelable(true);
-////                            d.show();
-//                            Toast.makeText(getApplicationContext(), "on item clcik", Toast.LENGTH_SHORT).show();
-//                        }
-//
-//                    });
-
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "통신 에러 발생", Toast.LENGTH_SHORT).show();
