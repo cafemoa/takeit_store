@@ -148,14 +148,14 @@ public class OrderListAdapter extends BaseAdapter {
             holder.swipeLayout.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View view, MotionEvent motionEvent) {
-                    if(motionEvent.getAction()==MotionEvent.ACTION_DOWN) {
+                    if(motionEvent.getAction()==MotionEvent.ACTION_UP) {
                         Log.d("TAG", "onclick");
 
                         Dialog d = new BottomSheetDialog(context);
                         d.setContentView(R.layout.dialog_bottom);
                         d.show();
                     }
-                    return false;
+                    return true;
                 }
             });
 
