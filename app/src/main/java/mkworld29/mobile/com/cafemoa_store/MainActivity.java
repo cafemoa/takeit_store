@@ -181,27 +181,21 @@ public class MainActivity extends AppCompatActivity
         retrofit= RetrofitInstance.getInstance(getApplicationContext());
         RetrofitConnection.get_orders service = retrofit.create(RetrofitConnection.get_orders.class);
 
-        final Call<List<RetrofitConnection.Order>> repos = service.repoContributors();
-        repos.enqueue(new Callback<List<RetrofitConnection.Order>>() {
+        final Call<List<Order>> repos = service.repoContributors();
+        repos.enqueue(new Callback<List<Order>>() {
             @Override
-            public void onResponse(Call<List<RetrofitConnection.Order>> call, Response<List<RetrofitConnection.Order>> response) {
+            public void onResponse(Call<List<Order>> call, Response<List<Order>> response) {
                 if (response.code() == 200) {
-
-                    List<RetrofitConnection.Order> orders= response.body();
+                    List<Order> orders= response.body();
                     int orders_num=orders.size();
 
                     for(int i=0; i<orders_num; i++){
-                        RetrofitConnection.Order order=orders.get(i);
+                        Order order=orders.get(i);
 
-                        List<RetrofitConnection.Option> options=order.options;
+                        List<CoffeeOption> options=order.options;
                         int option_num=options.size();
 
-                        for(int j=0; j<option_num; j++){
-                            RetrofitConnection.Option toption=options.get(j);
-                            CoffeeOption option = new CoffeeOption(toption.shot_num,toption.size,toption.is_ice,toption.whipping_cream);
-
-                            adapter.addItem(toption.beverage_name, order.get_time, order.order_num,option,order.pk);
-                        }
+                        adapter.addItem(order);
                     }
                     lv_order.setAdapter(adapter);
 
@@ -212,7 +206,7 @@ public class MainActivity extends AppCompatActivity
             }
 
             @Override
-            public void onFailure(Call<List<RetrofitConnection.Order>> call, Throwable t) {
+            public void onFailure(Call<List<Order>> call, Throwable t) {
                 Log.d("TAG", t.getLocalizedMessage());
             }
         });

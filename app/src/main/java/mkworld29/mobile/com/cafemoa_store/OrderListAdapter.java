@@ -22,6 +22,7 @@ import com.chauthai.swipereveallayout.SwipeRevealLayout;
 import com.chauthai.swipereveallayout.ViewBinderHelper;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitConnection;
 import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitInstance;
@@ -37,7 +38,7 @@ import retrofit2.Retrofit;
 
 public class OrderListAdapter extends BaseAdapter {
     private final ViewBinderHelper binderHelper;
-    private ArrayList<OrderListItem> listViewItemList = new ArrayList<>();
+    private ArrayList<Order> listViewItemList = new ArrayList<>();
 
     public OrderListAdapter()
     {
@@ -92,26 +93,15 @@ public class OrderListAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        final OrderListItem item = (OrderListItem) getItem(position);
+        final Order item = (Order) getItem(position);
 
         if(item!= null && binderHelper!=null){
             binderHelper.bind(holder.swipeLayout, item.toString());
 
-            CoffeeOption option = listViewItemList.get(position).getOption();
-            String str_option = String.valueOf(option.getSize()) + "/";
 
-            if(option.getSize() == 0)
-                str_option += "샷 추가 없음";
-            else
-                str_option += String.valueOf(option.getSize()) + "샷";
+            String str_content = "sibal";
+            String str_option="sibal";
 
-            str_option += (option.is_whipping())?"휘핑 추가" : "";
-
-            String str_content = listViewItemList.get(position).getContent();
-
-            if(option.is_cold())
-                str_content += " (ICE)";
-            else str_content += " (HOT)";
 
             if(Integer.parseInt(holder.tv_wait_time.getText().toString()) <= 3)
                 holder.lv_is_three_min.setVisibility(View.VISIBLE);
@@ -142,8 +132,7 @@ public class OrderListAdapter extends BaseAdapter {
 
             holder.tv_content.setText(str_content);
             holder.tv_option.setText(str_option);
-            holder.tv_number.setText(String.valueOf(listViewItemList.get(position).getOrder_number()));
-            holder.tv_wait_time.setText(String.valueOf(listViewItemList.get(position).getWait_time()));
+            holder.tv_number.setText(String.valueOf(listViewItemList.get(position).getOrder_num()));
 
             holder.swipeLayout.setOnTouchListener(new View.OnTouchListener() {
                 @Override
@@ -165,7 +154,7 @@ public class OrderListAdapter extends BaseAdapter {
                 public void onClick(View view) {
                     Retrofit retrofit= RetrofitInstance.getInstance(context);
                     RetrofitConnection.complete_order service = retrofit.create(RetrofitConnection.complete_order.class);
-                    final Call<ResponseBody> repos = service.repoContributors(listViewItemList.get(position).getBeverage_pk());
+                    final Call<ResponseBody> repos = service.repoContributors(listViewItemList.get(position).getPk());
                     repos.enqueue(new Callback<ResponseBody>() {
                         @Override
                         public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -191,19 +180,12 @@ public class OrderListAdapter extends BaseAdapter {
         return convertView;
     }
 
-    public ArrayList<OrderListItem> getListViewItemList()
+    public ArrayList<Order> getListViewItemList()
     {
         return listViewItemList;
     }
 
-    public void addItem(String content, int wait_time, int order_number, CoffeeOption option, int beverage_pk)
-    {
-        OrderListItem item = new OrderListItem(content, wait_time, order_number, option,beverage_pk);
-        listViewItemList.add(item);
-    }
-
-
-    public void addItem(OrderListItem item)
+    public void addItem(Order item)
     {
         listViewItemList.add(item);
     }
@@ -230,7 +212,5 @@ public class OrderListAdapter extends BaseAdapter {
         private LinearLayout lv_is_three_min;
         private View deleteView;
         private SwipeRevealLayout swipeLayout;
-
-
     }
 }

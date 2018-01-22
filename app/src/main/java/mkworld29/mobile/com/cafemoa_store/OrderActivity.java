@@ -71,23 +71,7 @@ public class OrderActivity extends AppCompatActivity implements SwipeRefreshLayo
                     for(int i=0; i<orders_num; i++){
                         Order order=orders.get(i);
 
-                        List<Option> options=order.options;
-                        int option_num=options.size();
 
-                        for(int j=0; j<option_num; j++){
-                            Option option=options.get(j);
-                            String order_num="주문번호 : "+order.order_num;
-                            String shots="샷 : "+option.shot_num;
-                            String is_ice="얼음 : "+option.is_ice;
-                            String whipping_cream="휘핑크림 : "+option.whipping_cream;
-
-                            adapter.addItem(option.beverage_name,order_num,shots,is_ice,whipping_cream, order.pk);
-
-                            //진동과 토스트
-                            vibrator.vibrate(2000); //2초간 진동
-                            Toast.makeText(getApplicationContext(),"주문이 도착했습니다.",Toast.LENGTH_SHORT).show();
-
-                        }
                     }
                     lv_order_list.setAdapter(adapter);
                 }

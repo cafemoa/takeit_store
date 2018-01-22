@@ -56,8 +56,6 @@ public class OrderListAdapter extends BaseAdapter{
 
         TextView tv_menu_name = (TextView) convertView.findViewById(R.id.tv_menu_name) ;
         TextView tv_sizes = (TextView) convertView.findViewById(R.id.tv_size) ;
-        TextView tv_is_whipping = (TextView) convertView.findViewById(R.id.tv_is_whipping) ;
-        TextView tv_is_cold = (TextView) convertView.findViewById(R.id.tv_is_cold) ;
         TextView tv_shots = (TextView) convertView.findViewById(R.id.tv_shots) ;
         Button   btn_commit = (Button) convertView.findViewById(R.id.btn_commit);
 
@@ -67,8 +65,6 @@ public class OrderListAdapter extends BaseAdapter{
         // 아이템 내 각 위젯에 데이터 반영
         tv_menu_name.setText(listViewItem.getMenu_name());
         tv_sizes.setText(String.valueOf(listViewItem.getSize()));
-        tv_is_whipping.setText(String.valueOf(listViewItem.is_whipping()));
-        tv_is_cold.setText(String.valueOf(listViewItem.is_cold()));
         tv_shots.setText(String.valueOf(listViewItem.getShots())+"샷");
         final int pk=listViewItem.getPk();
 
