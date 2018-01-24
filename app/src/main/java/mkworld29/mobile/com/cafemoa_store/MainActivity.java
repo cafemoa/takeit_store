@@ -191,10 +191,6 @@ public class MainActivity extends AppCompatActivity
 
                     for(int i=0; i<orders_num; i++){
                         Order order=orders.get(i);
-
-                        List<CoffeeOption> options=order.options;
-                        int option_num=options.size();
-
                         adapter.addItem(order);
                     }
                     lv_order.setAdapter(adapter);
