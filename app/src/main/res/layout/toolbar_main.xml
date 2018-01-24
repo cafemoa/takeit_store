@@ -20,14 +20,9 @@
         <ImageView
             android:id="@+id/toolbar_logo"
             android:src="@drawable/invalid_name"
-            android:padding="13dp"
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:layout_marginRight="6dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="4dp"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
             android:layout_gravity="center"/>
-
 
     </FrameLayout>
 </android.support.v7.widget.Toolbar>

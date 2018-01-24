@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity
     private ListView lv_order = null;
     OrderListAdapter adapter = null;
     Retrofit retrofit;
-    EditText et_min_time;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +54,6 @@ public class MainActivity extends AppCompatActivity
         startNavigation();
 
         Intent intent=getIntent();
-        int minTime=intent.getIntExtra("MinTime",0);
 
         new Timer().scheduleAtFixedRate(new TimerTask() {
             @Override
@@ -63,47 +61,6 @@ public class MainActivity extends AppCompatActivity
                 getData();
             }
         },500,10000);
-
-
-
-        et_min_time=(EditText)findViewById(R.id.et_min_time);
-        et_min_time.setText(""+minTime);
-
-        et_min_time.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    RetrofitConnection.set_minTime service = retrofit.create(RetrofitConnection.set_minTime.class);
-                    Call<ResponseBody> repos = null;
-                    try{
-                        repos = service.repoContributors(Integer.parseInt(et_min_time.getText().toString()));
-                    }catch (NumberFormatException e){
-                        e.printStackTrace();
-                    }
-                    repos.enqueue(new Callback<ResponseBody>() {
-                        @Override
-                        public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                            if (response.code() == 200) {
-                                Toast.makeText(getApplicationContext(), "성공적으로 설정 되었습니다.", Toast.LENGTH_SHORT).show();
-                            }
-                            else{
-                                Toast.makeText(getApplicationContext(), "통신 에러 발생", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-
-                        @Override
-                        public void onFailure(Call<ResponseBody> call, Throwable t) {
-                            Log.d("TAG", t.getLocalizedMessage());
-                        }
-                    });
-                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                    imm.hideSoftInputFromWindow(et_min_time.getWindowToken(), 0);
-
-                    return true;
-                }
-                return false;
-            }
-        });
 
 
         lv_order = (ListView) findViewById(R.id.lv_order);
@@ -170,14 +127,6 @@ public class MainActivity extends AppCompatActivity
         View hView = navigationView.getHeaderView(0);
         navigationView.setNavigationItemSelectedListener(this);
 
-//        ImageView iv_set_up = (ImageView) hView.findViewById(R.id.iv_set_up);
-//        iv_set_up.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, SettingActivity.class);
-//                startActivity(intent);
-//            }
-//        });
 
     }
 
