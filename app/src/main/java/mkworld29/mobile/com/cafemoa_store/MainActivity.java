@@ -5,7 +5,6 @@ import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,18 +15,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
-import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.AdapterView;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import com.tsengvn.typekit.TypekitContextWrapper;
 
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import mkworld29.mobile.com.cafemoa_store.Entity.Beverage;
+import mkworld29.mobile.com.cafemoa_store.Entity.Order;
+import mkworld29.mobile.com.cafemoa_store.adapter.OrderInItemListAdapter;
+import mkworld29.mobile.com.cafemoa_store.adapter.OrderListAdapter;
 import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitConnection;
 import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitInstance;
 import okhttp3.ResponseBody;
@@ -65,17 +65,7 @@ public class MainActivity extends AppCompatActivity
 
         lv_order = (ListView) findViewById(R.id.lv_order);
 
-        lv_order.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
 
     }
 
@@ -138,29 +128,33 @@ public class MainActivity extends AppCompatActivity
         retrofit= RetrofitInstance.getInstance(getApplicationContext());
         RetrofitConnection.get_orders service = retrofit.create(RetrofitConnection.get_orders.class);
 
-        final Call<List<RetrofitConnection.Order>> repos = service.repoContributors();
-        repos.enqueue(new Callback<List<RetrofitConnection.Order>>() {
+        final Call<List<Order>> repos = service.repoContributors();
+        repos.enqueue(new Callback<List<Order>>() {
             @Override
-            public void onResponse(Call<List<RetrofitConnection.Order>> call, Response<List<RetrofitConnection.Order>> response) {
+            public void onResponse(Call<List<Order>> call, Response<List<Order>> response) {
                 if (response.code() == 200) {
-
-                    List<RetrofitConnection.Order> orders= response.body();
+                    List<Order> orders= response.body();
                     int orders_num=orders.size();
 
                     for(int i=0; i<orders_num; i++){
-                        RetrofitConnection.Order order=orders.get(i);
+                        Order order=orders.get(i);
+                        order.adapter = new OrderInItemListAdapter();
 
-                        List<RetrofitConnection.Option> options=order.options;
-                        int option_num=options.size();
+                        List<Beverage> beverages=order.getBeverages();
+                        int beverage_num=beverages.size();
 
-                        for(int j=0; j<option_num; j++){
-                            RetrofitConnection.Option toption=options.get(j);
-                            CoffeeOption option = new CoffeeOption(toption.shot_num,toption.size,toption.is_ice,toption.whipping_cream);
+                        adapter.addItem(order);
 
-                            adapter.addItem(toption.beverage_name, order.get_time, order.order_num,option,order.pk);
+                        for(Beverage bev : beverages)
+                        {
+                            Log.d("MainActivity TAG",  bev.beverage_name);
+                            order.adapter.addItem(bev);
                         }
+
+                        Log.d("MainActivty TAG", "Order Fin" + order.getOrder_num());
                     }
                     lv_order.setAdapter(adapter);
+
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "통신 에러 발생", Toast.LENGTH_SHORT).show();
@@ -168,31 +162,11 @@ public class MainActivity extends AppCompatActivity
             }
 
             @Override
-            public void onFailure(Call<List<RetrofitConnection.Order>> call, Throwable t) {
+            public void onFailure(Call<List<Order>> call, Throwable t) {
                 Log.d("TAG", t.getLocalizedMessage());
             }
         });
     }
-
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-
-        if(adapter != null)
-            adapter.saveStates(outState);
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-
-        // Only if you need to restore open/close state when
-        // the orientation is changed
-        if (adapter != null) {
-            adapter.restoreStates(savedInstanceState);
-        }
-    }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -278,5 +252,12 @@ public class MainActivity extends AppCompatActivity
             return false;
         }
     }
+
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
+    }
+
 
 }

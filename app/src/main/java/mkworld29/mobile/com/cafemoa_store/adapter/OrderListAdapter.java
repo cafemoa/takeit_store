@@ -1,22 +1,33 @@
 package mkworld29.mobile.com.cafemoa_store.adapter;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
+import android.support.design.widget.BottomSheetDialog;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.chauthai.swipereveallayout.SwipeRevealLayout;
+import com.chauthai.swipereveallayout.ViewBinderHelper;
 
+import java.util.ArrayList;
+
+import mkworld29.mobile.com.cafemoa_store.Entity.Order;
+import mkworld29.mobile.com.cafemoa_store.Entity.OrderState;
 import mkworld29.mobile.com.cafemoa_store.R;
-import mkworld29.mobile.com.cafemoa_store.item.OrderItem;
 import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitConnection;
 import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitInstance;
 import okhttp3.ResponseBody;
@@ -26,105 +37,116 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 
 /**
- * Created by parkjaemin on 2017. 8. 27..
+ * Created by parkjaemin on 2017. 11. 15..
  */
 
-public class OrderListAdapter extends BaseAdapter{
-    private ArrayList<OrderItem> listViewItemList = new ArrayList<OrderItem>() ;
-    // ListViewAdapter의 생성자
-    public OrderListAdapter() {
+public class OrderListAdapter extends BaseAdapter {
+    private ArrayList<Order> listViewItemList = new ArrayList<>();
 
+    public OrderListAdapter()
+    {
+        listViewItemList = new ArrayList<>();
     }
 
-    // Adapter에 사용되는 데이터의 개수를 리턴. : 필수 구현
     @Override
     public int getCount() {
-        return listViewItemList.size() ;
+        return listViewItemList.size();
     }
 
-    // position에 위치한 데이터를 화면에 출력하는데 사용될 View를 리턴. : 필수 구현
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        final int pos = position;
-        final Context context = parent.getContext();
+    public Object getItem(int position) {
+        return listViewItemList.get(position);
+    }
 
-        // "listview_item" Layout을 inflate하여 convertView 참조 획득.
-        if (convertView == null) {
+    @Override
+    public long getItemId(int position) {
+        return 0;
+    }
+
+    public void remove(int position){
+        listViewItemList.remove(listViewItemList.get(position));
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    @Override
+    public View getView(final int position, View convertView, final ViewGroup parent) {
+        final Context context = parent.getContext();
+        final View _convertView;
+        final ViewHolder holder;
+
+        if(convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.item_order_list, parent, false);
+            convertView = inflater.inflate(R.layout.item_order_list2, parent, false);
+
+            holder = new ViewHolder();
+
+            holder.tv_number            =   (TextView)convertView.findViewById(R.id.tv_order_number);
+            holder.ly_order_state       =   (LinearLayout) convertView.findViewById(R.id.ly_order_state);
+            holder.lv_content           =   (ListView)  convertView.findViewById(R.id.lv_content);
+            holder.tv_order_state       =   (TextView) convertView.findViewById(R.id.tv_order_state);
+            holder.state                =   OrderState.BEFORE;
+
+            convertView.setTag(holder);
+        }else{
+            holder = (ViewHolder) convertView.getTag();
         }
 
-        TextView tv_menu_name = (TextView) convertView.findViewById(R.id.tv_menu_name) ;
-        TextView tv_sizes = (TextView) convertView.findViewById(R.id.tv_size) ;
-        TextView tv_is_whipping = (TextView) convertView.findViewById(R.id.tv_is_whipping) ;
-        TextView tv_is_cold = (TextView) convertView.findViewById(R.id.tv_is_cold) ;
-        TextView tv_shots = (TextView) convertView.findViewById(R.id.tv_shots) ;
-        Button   btn_commit = (Button) convertView.findViewById(R.id.btn_commit);
+        _convertView = convertView;
 
-        // Data Set(listViewItemList)에서 position에 위치한 데이터 참조 획득
-        OrderItem listViewItem = listViewItemList.get(position);
+        final Order item = (Order) getItem(position);
 
-        // 아이템 내 각 위젯에 데이터 반영
-        tv_menu_name.setText(listViewItem.getMenu_name());
-        tv_sizes.setText(String.valueOf(listViewItem.getSize()));
-        tv_is_whipping.setText(String.valueOf(listViewItem.is_whipping()));
-        tv_is_cold.setText(String.valueOf(listViewItem.is_cold()));
-        tv_shots.setText(String.valueOf(listViewItem.getShots())+"샷");
-        final int pk=listViewItem.getPk();
+        if(item!= null){
 
-        btn_commit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(final View view) {
-                Retrofit retrofit = RetrofitInstance.getInstance(view.getContext());
-                RetrofitConnection.complete_order service = retrofit.create(RetrofitConnection.complete_order.class);
+            holder.lv_content.setAdapter(item.getAdapter());
 
+            holder.tv_number.setText(String.valueOf(listViewItemList.get(position).getOrder_num()));
 
-                final Call<ResponseBody> repos = service.repoContributors(pk);
-                repos.enqueue(new Callback<ResponseBody>() {
-                    @Override
-                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+            holder.ly_order_state.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ViewHolder holder = (ViewHolder) _convertView.getTag();
 
-                        Toast.makeText(view.getContext(), "음료가 준비가 완료되었습니다.", Toast.LENGTH_SHORT).show();
+                    switch (holder.state)
+                    {
+                        case BEFORE:
+                            holder.state = OrderState.ING;
+                            holder.ly_order_state.setBackground(new ColorDrawable(0xFFF5A623));
+                            holder.tv_order_state.setText("제조중");
+
+                        case ING:
+                            holder.state = OrderState.AFTER;
+                            holder.ly_order_state.setBackground(new ColorDrawable(0xFF417505));
+                            holder.tv_order_state.setText("제조완료");
+
+                        case AFTER:
+                            // Remove Code
+
                     }
+                }
+            });
 
-                    @Override
-                    public void onFailure(Call<ResponseBody> call, Throwable t) {
-                        Log.d("TAG", t.getLocalizedMessage());
-                    }
-                });
-            }
-        });
+        }
 
         return convertView;
     }
 
-    // 지정한 위치(position)에 있는 데이터와 관계된 아이템(row)의 ID를 리턴. : 필수 구현
-    @Override
-    public long getItemId(int position) {
-        return position ;
+    public ArrayList<Order> getListViewItemList()
+    {
+        return listViewItemList;
     }
 
-    // 지정한 위치(position)에 있는 데이터 리턴 : 필수 구현
-    @Override
-    public Object getItem(int position) {
-        return listViewItemList.get(position) ;
-    }
-
-    // 아이템 데이터 추가를 위한 함수. 개발자가 원하는대로 작성 가능.
-    public void addItem(String menu_name, String sizes, String shots, String is_whipping, String is_cold,int pk) {
-        OrderItem item = new OrderItem();
-
-        item.setMenu_name(menu_name);
-        item.setSize(sizes);
-        item.setShots(shots);
-        item.setIs_whipping(is_whipping);
-        item.setIs_cold(is_cold);
-        item.setPk(pk);
-
+    public void addItem(Order item)
+    {
         listViewItemList.add(item);
     }
 
 
+    private class ViewHolder {
+        private TextView tv_number, tv_order_state;
+        private ListView lv_content;
+        private LinearLayout ly_order_state;
+        private OrderState state;
+    }
+
+
 }
-
-

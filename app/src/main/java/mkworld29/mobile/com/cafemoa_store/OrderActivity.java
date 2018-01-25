@@ -1,5 +1,7 @@
 package mkworld29.mobile.com.cafemoa_store;
 
+import android.content.Context;
+import android.os.Vibrator;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,8 +9,8 @@ import android.util.Log;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import mkworld29.mobile.com.cafemoa_store.Entity.Order;
 import mkworld29.mobile.com.cafemoa_store.adapter.OrderListAdapter;
-import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitConnection.*;
 import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitConnection;
 import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitInstance;
 import retrofit2.Call;
@@ -26,6 +28,10 @@ public class OrderActivity extends AppCompatActivity implements SwipeRefreshLayo
     private OrderListAdapter adapter;
     private SwipeRefreshLayout mSwipeRefreshLayout;
 
+    final Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +43,7 @@ public class OrderActivity extends AppCompatActivity implements SwipeRefreshLayo
 
 
         lv_order_list = (ListView) findViewById(R.id.lv_order_list);
+
 
         onRefresh();
     }
@@ -60,18 +67,7 @@ public class OrderActivity extends AppCompatActivity implements SwipeRefreshLayo
                     for(int i=0; i<orders_num; i++){
                         Order order=orders.get(i);
 
-                        List<Option> options=order.options;
-                        int option_num=options.size();
 
-                        for(int j=0; j<option_num; j++){
-                            Option option=options.get(j);
-                            String order_num="주문번호 : "+order.order_num;
-                            String shots="샷 : "+option.shot_num;
-                            String is_ice="얼음 : "+option.is_ice;
-                            String whipping_cream="휘핑크림 : "+option.whipping_cream;
-
-                            adapter.addItem(option.beverage_name,order_num,shots,is_ice,whipping_cream, order.pk);
-                        }
                     }
                     lv_order_list.setAdapter(adapter);
                 }
