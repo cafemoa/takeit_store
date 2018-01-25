@@ -1,13 +1,10 @@
 package mkworld29.mobile.com.cafemoa_store;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
-import android.support.design.widget.BottomSheetDialog;
 import android.support.v7.app.ActionBar;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -18,18 +15,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.WindowManager;
-import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.AdapterView;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import com.tsengvn.typekit.TypekitContextWrapper;
 
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import mkworld29.mobile.com.cafemoa_store.Entity.Beverage;
+import mkworld29.mobile.com.cafemoa_store.Entity.Order;
+import mkworld29.mobile.com.cafemoa_store.adapter.OrderInItemListAdapter;
+import mkworld29.mobile.com.cafemoa_store.adapter.OrderListAdapter;
 import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitConnection;
 import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitInstance;
 import okhttp3.ResponseBody;
@@ -44,7 +42,6 @@ public class MainActivity extends AppCompatActivity
     private ListView lv_order = null;
     OrderListAdapter adapter = null;
     Retrofit retrofit;
-    EditText et_min_time;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +54,6 @@ public class MainActivity extends AppCompatActivity
         startNavigation();
 
         Intent intent=getIntent();
-        int minTime=intent.getIntExtra("MinTime",0);
 
         new Timer().scheduleAtFixedRate(new TimerTask() {
             @Override
@@ -65,47 +61,6 @@ public class MainActivity extends AppCompatActivity
                 getData();
             }
         },500,10000);
-
-
-
-        et_min_time=(EditText)findViewById(R.id.et_min_time);
-        et_min_time.setText(""+minTime);
-
-        et_min_time.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    RetrofitConnection.set_minTime service = retrofit.create(RetrofitConnection.set_minTime.class);
-                    Call<ResponseBody> repos = null;
-                    try{
-                        repos = service.repoContributors(Integer.parseInt(et_min_time.getText().toString()));
-                    }catch (NumberFormatException e){
-                        e.printStackTrace();
-                    }
-                    repos.enqueue(new Callback<ResponseBody>() {
-                        @Override
-                        public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                            if (response.code() == 200) {
-                                Toast.makeText(getApplicationContext(), "성공적으로 설정 되었습니다.", Toast.LENGTH_SHORT).show();
-                            }
-                            else{
-                                Toast.makeText(getApplicationContext(), "통신 에러 발생", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-
-                        @Override
-                        public void onFailure(Call<ResponseBody> call, Throwable t) {
-                            Log.d("TAG", t.getLocalizedMessage());
-                        }
-                    });
-                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                    imm.hideSoftInputFromWindow(et_min_time.getWindowToken(), 0);
-
-                    return true;
-                }
-                return false;
-            }
-        });
 
 
         lv_order = (ListView) findViewById(R.id.lv_order);
@@ -162,14 +117,6 @@ public class MainActivity extends AppCompatActivity
         View hView = navigationView.getHeaderView(0);
         navigationView.setNavigationItemSelectedListener(this);
 
-//        ImageView iv_set_up = (ImageView) hView.findViewById(R.id.iv_set_up);
-//        iv_set_up.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, SettingActivity.class);
-//                startActivity(intent);
-//            }
-//        });
 
     }
 
@@ -191,7 +138,20 @@ public class MainActivity extends AppCompatActivity
 
                     for(int i=0; i<orders_num; i++){
                         Order order=orders.get(i);
+                        order.adapter = new OrderInItemListAdapter();
+
+                        List<Beverage> beverages=order.getBeverages();
+                        int beverage_num=beverages.size();
+
                         adapter.addItem(order);
+
+                        for(Beverage bev : beverages)
+                        {
+                            Log.d("MainActivity TAG",  bev.beverage_name);
+                            order.adapter.addItem(bev);
+                        }
+
+                        Log.d("MainActivty TAG", "Order Fin" + order.getOrder_num());
                     }
                     lv_order.setAdapter(adapter);
 
@@ -207,26 +167,6 @@ public class MainActivity extends AppCompatActivity
             }
         });
     }
-
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-
-        if(adapter != null)
-            adapter.saveStates(outState);
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-
-        // Only if you need to restore open/close state when
-        // the orientation is changed
-        if (adapter != null) {
-            adapter.restoreStates(savedInstanceState);
-        }
-    }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -312,5 +252,12 @@ public class MainActivity extends AppCompatActivity
             return false;
         }
     }
+
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
+    }
+
 
 }

@@ -6,7 +6,7 @@ package mkworld29.mobile.com.cafemoa_store.retrofit;
 
 import java.util.List;
 
-import mkworld29.mobile.com.cafemoa_store.Order;
+import mkworld29.mobile.com.cafemoa_store.Entity.Order;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;

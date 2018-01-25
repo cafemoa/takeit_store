@@ -1,5 +1,8 @@
 package mkworld29.mobile.com.cafemoa_store;
 
+
+import mkworld29.mobile.com.cafemoa_store.Entity.Beverage;
+
 /**
  * Created by parkjaemin on 2017. 11. 15..
  */
@@ -7,11 +10,11 @@ package mkworld29.mobile.com.cafemoa_store;
 public class OrderListItem {
 
     private String content;
-    private CoffeeOption option;
+    private Beverage option;
     private int order_number;
     private int beverage_pk;
 
-    public OrderListItem(String content, int order_number, CoffeeOption option, int beverage_pk)
+    public OrderListItem(String content, int order_number, Beverage option, int beverage_pk)
     {
         this.content = content;
         this.order_number = order_number;
@@ -27,11 +30,11 @@ public class OrderListItem {
         this.content = content;
     }
 
-    public CoffeeOption getOption() {
+    public Beverage getOption() {
         return option;
     }
 
-    public void setOption(CoffeeOption option) {
+    public void setOption(Beverage option) {
         this.option = option;
     }
 

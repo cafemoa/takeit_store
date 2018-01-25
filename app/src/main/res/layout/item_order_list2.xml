@@ -10,150 +10,82 @@
 
     >
 
-    <com.chauthai.swipereveallayout.SwipeRevealLayout
-        android:id="@+id/srl_order"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:mode="same_level"
-        android:elevation="5dp"
-        app:dragEdge="right">
+        android:background="@drawable/item_rounded_button">
 
-        <!-- Your secondary layout here -->
-        <FrameLayout
-            android:id="@+id/delete_view"
-            android:layout_width="wrap_content"
-            android:layout_height="130dp"
-            android:background="#646668">
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:textSize="13sp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:textColor="#fcfcfc"
-                android:text="완료"/>
-
-        </FrameLayout>
-
-        <!-- Your main layout here -->
-        <FrameLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="130dp"
-            android:background="@drawable/item_rounded_button">
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center_vertical"
+            android:orientation="horizontal"
+            android:gravity="center">
 
             <LinearLayout
-                android:id="@+id/lv_is_three_min"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:visibility="gone"
-                android:background="#fc0000">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="서둘러주세요."
-                    android:textColor="#fcfcfc"/>
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="left"
-                android:orientation="horizontal"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:orientation="vertical"
                 android:gravity="center">
 
-                <LinearLayout
-                    android:layout_width="50dp"
-                    android:layout_height="80dp"
-                    android:orientation="vertical"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="번호"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:textColor="#0c0c0c"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:id="@+id/tv_order_number"
-                        android:layout_width="30dp"
-                        android:layout_height="wrap_content"
-                        android:text="0"
-                        android:gravity="center"
-                        android:textColor="#0c0c0c"
-                        android:textStyle="bold"
-                        android:textSize="25sp" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="200dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp">
-
-                    <TextView
-                        android:id="@+id/tv_content"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:textSize="20sp"
-                        android:textColor="#0c0c0c"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        android:text="아메리카노 (ICE)"/>
-
-                    <TextView
-                        android:id="@+id/tv_option"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:textColor="#646668"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:textSize="16sp"
-                        android:text="S/샷 추가 없음"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_marginLeft="10dp">
-
-                    <TextView
-                        android:id="@+id/tv_wait_time"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15sp"
-                        android:text="7"
-                        android:textColor="#fc0c0c"/>
-
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15sp"
-                    android:text=" 분 후"
-                    android:textColor="#fc0c0c"/>
+                    android:text="번호"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="#0c0c0c"
+                    android:textSize="18sp" />
 
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_order_number"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:gravity="center"
+                    android:textColor="#0c0c0c"
+                    android:textStyle="bold"
+                    android:textSize="25sp" />
+
+
             </LinearLayout>
 
-            </FrameLayout>
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp">
+
+                <ListView
+                    android:id="@+id/lv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
 
 
-    </com.chauthai.swipereveallayout.SwipeRevealLayout>
+            </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/ly_order_state"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="#ef4135">
+
+                <TextView
+                    android:id="@+id/tv_order_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:text="제조시작"
+                    android:textColor="#fcfcfc"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
 </LinearLayout>
