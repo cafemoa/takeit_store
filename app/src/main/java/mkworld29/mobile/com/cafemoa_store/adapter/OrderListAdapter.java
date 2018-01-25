@@ -28,6 +28,7 @@ import java.util.ArrayList;
 import mkworld29.mobile.com.cafemoa_store.Entity.Order;
 import mkworld29.mobile.com.cafemoa_store.Entity.OrderState;
 import mkworld29.mobile.com.cafemoa_store.R;
+import mkworld29.mobile.com.cafemoa_store.Utils;
 import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitConnection;
 import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitInstance;
 import okhttp3.ResponseBody;
@@ -124,8 +125,9 @@ public class OrderListAdapter extends BaseAdapter {
                     }
                 }
             });
-
         }
+
+        Utils.getInstance().setListViewHeightBasedOnChildren(holder.lv_content);
 
         return convertView;
     }
@@ -139,7 +141,6 @@ public class OrderListAdapter extends BaseAdapter {
     {
         listViewItemList.add(item);
     }
-
 
     private class ViewHolder {
         private TextView tv_number, tv_order_state;

@@ -65,8 +65,7 @@ public class MainActivity extends AppCompatActivity
 
         lv_order = (ListView) findViewById(R.id.lv_order);
 
-
-
+        Utils.getInstance().setListViewHeightBasedOnChildren(lv_order);
     }
 
     @Override
@@ -141,7 +140,6 @@ public class MainActivity extends AppCompatActivity
                         order.adapter = new OrderInItemListAdapter();
 
                         List<Beverage> beverages=order.getBeverages();
-                        int beverage_num=beverages.size();
 
                         adapter.addItem(order);
 
