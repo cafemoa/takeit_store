@@ -4,26 +4,77 @@
     android:layout_height="200dp"
     android:orientation="vertical">
 
-    <TextView
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="Dialog 제목" />
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="주문번호 4"
+            android:textColor="#24253d"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#24253d"
+            android:gravity="center_horizontal"
+            android:text="아메리카노X6 외 9잔"
+            />
 
-    <View
-        android:layout_width="50dp"
-        android:layout_height="0.3dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:background="@color/colorAccent" />
+    </LinearLayout>
+
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
-        android:text="BottomSheetDialog Test" />
+        android:textColor="#24253d"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp"
+        android:text="삭제하시겠습니까?" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/order_delete_okay"
+            android:layout_marginLeft="75dp"
+
+            android:gravity="left"
+            android:text="확인"
+            android:textColor="#ef4136"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/order_delete_cancel"
+
+
+            android:layout_marginRight="75dp"
+            android:gravity="right"
+            android:text="취소"
+            android:textColor="#24253d"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+
+
 
 </LinearLayout>
