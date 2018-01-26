@@ -10,6 +10,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import java.util.ArrayList;
+
 /**
  * Created by 건후 on 2015-08-25.
  */
@@ -39,82 +41,75 @@ public class DBManager {
 
     }
 
-    public void insert(int time)
+    public void insert(String item)
     {
-        String table = "TAKEIT";
+        String table = "RECEIPT";
         db = helper.getWritableDatabase();
-        Log.d("Insert DB Values", String.valueOf(time));
         ContentValues values = new ContentValues();
-        values.put("time", time);
-        Log.d("Insert " + time + "Success", String.valueOf(time));
-        db.insert("STELLA",null, values);
+        values.put("item", item);
+        db.insert(table,null, values);
     }
 
     public void update(int target, String text)
     {
-        db = helper.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put("text", text);
-        db.update("STELLA",
-                values,
-                "num=?",
-                new String[]{String.valueOf(target)});
-        Log.d("Update " + target + "Success", text);
+//        db = helper.getWritableDatabase();
+//        ContentValues values = new ContentValues();
+//        values.put("text", text);
+//        db.update("STELLA",
+//                values,
+//                "num=?",
+//                new String[]{String.valueOf(target)});
+//        Log.d("Update " + target + "Success", text);
     }
 
     public void delete(int target)
     {
-        db = helper.getWritableDatabase();
-        db.delete("STELLA",
-                "day=?",
-                new String[]{String.valueOf(target)});
-        Log.d("SQLITE DELETE", String.valueOf(target));
+//        db = helper.getWritableDatabase();
+//        db.delete("STELLA",
+//                "day=?",
+//                new String[]{String.valueOf(target)});
+//        Log.d("SQLITE DELETE", String.valueOf(target));
     }
 
-    public String select(int target)
+//    public ArrayList<String> getReceipt()
+//    {
+//        db = helper.getReadableDatabase();
+//        Cursor c = db.query("RECEIPT",
+//                null,
+//                null,
+//                null,
+//                null,
+//                null,
+//                null);
+//
+//        ArrayList<String[]> result=new ArrayList<String[]>();
+//
+//        while(c.moveToNext())
+//        {
+//            String item = c.getString(0);
+//            String time = c.getString(1);
+//            String temp[]={item,time};
+//            result.add(temp);
+//        }
+//
+//        return result;
+//    }
+
+    public ArrayList<String> getReceiptList()
     {
         db = helper.getReadableDatabase();
-        Cursor c = db.query("STELLA",
-                null,
-                null,
-                null,
-                null,
-                null,
-                null);
-        String text = "";
-        while(c.moveToNext())
-        {
-            int num = c.getInt(c.getColumnIndex("time"));
+        Cursor result = db.rawQuery("SELECT item FROM RECEIPT order by id DESC", null);
 
-            if(num == target)
-            {
-                text = c.getString(c.getColumnIndex("id"));
-                Log.d("SQL SELECT", target + ": " + String.valueOf(text));
-                break;
-            }
-        }
-        return text;
+        ArrayList<String> receiptList=new ArrayList<String>();
 
-    }
-
-    public int[] selectTop()
-    {
-        db = helper.getReadableDatabase();
-        Cursor result = db.rawQuery("SELECT id, time FROM STELLA order by time desc limit 3", null);
-
-        int[] buf = new int[3];
-        int pivot = 0;
         result.moveToFirst();
-
         while (!result.isAfterLast()){
-            int id = result.getInt(0);
-            int time = result.getInt(1);
-            Log.d("SELCETTOP", String.valueOf(time));
-            buf[pivot++] = time;
-
+            String item = result.getString(1);
+            receiptList.add(item);
             result.moveToNext();
         }
+
         result.close();
-        return buf;
+        return receiptList;
     }
 }

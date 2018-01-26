@@ -19,9 +19,9 @@ public class MySQLiteHelper extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_BOOK_TABLE = "CREATE TABLE IF NOT EXISTS TAKEIT" +
+        String CREATE_BOOK_TABLE = "CREATE TABLE IF NOT EXISTS RECEIPT" +
                 " ( id INTEGER PRIMARY KEY autoincrement, " +
-                "time INTEGER NOT NULL );";
+                "item TEXT NOT NULL );";
 
         Log.d("SQLITE OnCreate", "Success");
         db.execSQL(CREATE_BOOK_TABLE);
@@ -29,7 +29,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper{
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        String sql = "DROP TABLE IF EXISTS STELLA";
+        String sql = "DROP TABLE IF EXISTS RECEIPT";
         db.execSQL(sql);
         onCreate(db);
     }
