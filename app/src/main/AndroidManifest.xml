@@ -47,6 +47,12 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent" />
 
+        <activity android:name=".DeleteDialog"
+            android:theme="@android:style/Theme.Dialog">
+
+
+        </activity>
+
         <activity
             android:name=".StartActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>

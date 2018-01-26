@@ -6,6 +6,12 @@ import android.view.ViewGroup;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import mkworld29.mobile.com.cafemoa_store.Entity.Order;
+import mkworld29.mobile.com.cafemoa_store.Entity.StoredOrder;
+
 /**
  * Created by parkjaemin on 2018. 1. 25..
  */
@@ -52,5 +58,18 @@ public class Utils {
         params.height = totalHeight;
         listView.setLayoutParams(params);
         listView.requestLayout();
+    }
+
+    public String OrderToString(StoredOrder o)
+    {
+        Gson gson = new Gson();
+        return gson.toJson(o);
+    }
+
+    public StoredOrder StringToOrder(String s)
+    {
+        Gson gson = new Gson();
+        return gson.fromJson(s, StoredOrder.class);
+
     }
 }

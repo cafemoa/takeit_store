@@ -5,39 +5,30 @@ import java.util.List;
 import mkworld29.mobile.com.cafemoa_store.adapter.OrderInItemListAdapter;
 
 /**
- * Created by ABCla on 2018-01-22.
+ * Created by parkjaemin on 2018. 1. 26..
  */
 
-public class Order{
+
+public class StoredOrder{
     public int pk;
     public String order_time;
     public int order_num;
     public int payment_type;
     public String orderer_username;
     public List<Beverage> beverages;
-    public OrderInItemListAdapter adapter;
 
-    public Order()
+    public StoredOrder()
     {
 
     }
 
-    public Order(int pk, String order_time, int order_num, int payment_type, String orderer_username, List<Beverage> beverages, OrderInItemListAdapter adapter) {
+    public StoredOrder(int pk, String order_time, int order_num, int payment_type, String orderer_username, List<Beverage> beverages) {
         this.pk = pk;
         this.order_time = order_time;
         this.order_num = order_num;
         this.payment_type = payment_type;
         this.orderer_username = orderer_username;
         this.beverages = beverages;
-        this.adapter = adapter;
-    }
-
-    public OrderInItemListAdapter getAdapter() {
-        return adapter;
-    }
-
-    public void setAdapter(OrderInItemListAdapter adapter) {
-        this.adapter = adapter;
     }
 
     public int getPk() {
@@ -88,3 +79,4 @@ public class Order{
         this.beverages = beverages;
     }
 }
+
