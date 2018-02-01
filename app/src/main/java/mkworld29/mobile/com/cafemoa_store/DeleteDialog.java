@@ -15,7 +15,14 @@ import com.google.gson.Gson;
 import mkworld29.mobile.com.cafemoa_store.Entity.Order;
 import mkworld29.mobile.com.cafemoa_store.Entity.StoredOrder;
 import mkworld29.mobile.com.cafemoa_store.etc.DBManager;
+import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitConnection;
+import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitInstance;
+import okhttp3.ResponseBody;
 import okhttp3.internal.Util;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
 
 /**
  * Created by ABCla on 2017-11-14.
@@ -67,13 +74,26 @@ public class DeleteDialog extends Activity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-
         if(v.getId() == tv_order_delete_ok.getId())
         {
             Intent returnIntent = new Intent();
             returnIntent.putExtra("Position", position);
             returnIntent.putExtra("Item", Utils.getInstance().OrderToString(item));
             setResult(Activity.RESULT_OK,returnIntent);
+
+            Retrofit retrofit = RetrofitInstance.getInstance(getApplicationContext());
+            RetrofitConnection.order_end end_service = retrofit.create(RetrofitConnection.order_end.class);
+            final Call<ResponseBody> end_repos = end_service.repoContributors(item.getPk());
+            end_repos.enqueue(new Callback<ResponseBody>() {
+                @Override
+                public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+
+                }
+                @Override
+                public void onFailure(Call<ResponseBody> call, Throwable t) {
+                }
+            });
+
             finish();
         }
         else if(v.getId() == tv_order_delete_cancel.getId())

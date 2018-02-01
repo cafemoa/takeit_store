@@ -52,8 +52,22 @@ public class RetrofitConnection {
         Call<List<Order>> repoContributors();
     }
 
+    public interface order_end{
+        @POST("set_end/{PK}")
+        Call<ResponseBody> repoContributors(
+                @Path("PK") int pk
+        );
+    }
+
     public interface complete_order{
         @POST("complete_order/{PK}")
+        Call<ResponseBody> repoContributors(
+                @Path("PK") int pk
+        );
+    }
+
+    public interface order_making{
+        @POST("set_making/{PK}")
         Call<ResponseBody> repoContributors(
                 @Path("PK") int pk
         );
@@ -79,4 +93,6 @@ public class RetrofitConnection {
         @GET("cafe_info/")
         Call<Cafe> repoContributors();
     }
+
+
 }

@@ -26,6 +26,7 @@ import com.chauthai.swipereveallayout.ViewBinderHelper;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import mkworld29.mobile.com.cafemoa_store.DeleteDialog;
 import mkworld29.mobile.com.cafemoa_store.Entity.Order;
@@ -48,10 +49,10 @@ import retrofit2.Retrofit;
 
 public class OrderListAdapter extends BaseAdapter {
     private ArrayList<Order> listViewItemList = new ArrayList<>();
-
     public OrderListAdapter()
     {
         listViewItemList = new ArrayList<>();
+
     }
 
     @Override
@@ -79,6 +80,7 @@ public class OrderListAdapter extends BaseAdapter {
         final Context context = parent.getContext();
         final View _convertView;
         final ViewHolder holder;
+        final Order item = (Order) getItem(position);
 
         if(convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -90,8 +92,8 @@ public class OrderListAdapter extends BaseAdapter {
             holder.ly_order_state       =   (LinearLayout) convertView.findViewById(R.id.ly_order_state);
             holder.lv_content           =   (ListView)  convertView.findViewById(R.id.lv_content);
             holder.tv_order_state       =   (TextView) convertView.findViewById(R.id.tv_order_state);
-            holder.state                =   OrderState.BEFORE;
-
+            holder.state                =   OrderState.values()[item.getState()];
+            set_state(holder);
             convertView.setTag(holder);
         }else{
             holder = (ViewHolder) convertView.getTag();
@@ -99,34 +101,50 @@ public class OrderListAdapter extends BaseAdapter {
 
         _convertView = convertView;
 
-        final Order item = (Order) getItem(position);
-
         if(item!= null){
-
             holder.lv_content.setAdapter(item.getAdapter());
-
             holder.tv_number.setText(String.valueOf(listViewItemList.get(position).getOrder_num()));
+
 
             holder.ly_order_state.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     ViewHolder holder = (ViewHolder) _convertView.getTag();
-
+                    Retrofit retrofit=RetrofitInstance.getInstance(context.getApplicationContext());
                     switch (holder.state)
                     {
-                        case BEFORE:
-                            holder.state = OrderState.ING;
-                            holder.ly_order_state.setBackground(new ColorDrawable(0xFFF5A623));
-                            holder.tv_order_state.setText("제조중");
+                        case READY:
+                            holder.state = OrderState.MAKING;
+                            RetrofitConnection.order_making making_service = retrofit.create(RetrofitConnection.order_making.class);
+                            final Call<ResponseBody> making_repos = making_service.repoContributors(item.getPk());
+                            making_repos.enqueue(new Callback<ResponseBody>() {
+                                @Override
+                                public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+
+                                }
+                                @Override
+                                public void onFailure(Call<ResponseBody> call, Throwable t) {
+                                }
+                            });
+
                             break;
 
-                        case ING:
-                            holder.state = OrderState.AFTER;
-                            holder.ly_order_state.setBackground(new ColorDrawable(0xFF417505));
-                            holder.tv_order_state.setText("제조완료");
+                        case MAKING:
+                            holder.state = OrderState.DONE;
+                            RetrofitConnection.complete_order complete_service = retrofit.create(RetrofitConnection.complete_order.class);
+                            final Call<ResponseBody> complete_repos = complete_service.repoContributors(item.getPk());
+                            complete_repos.enqueue(new Callback<ResponseBody>() {
+                                @Override
+                                public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+
+                                }
+                                @Override
+                                public void onFailure(Call<ResponseBody> call, Throwable t) {
+                                }
+                            });
                             break;
 
-                        case AFTER:
+                        case DONE:
                             // Remove Code
                             Intent intent = new Intent(_convertView.getContext(), DeleteDialog.class);
                             StoredOrder so = new StoredOrder(item.pk, item.order_time, item.order_num, item.payment_type, item.orderer_username, item.beverages);
@@ -136,8 +154,8 @@ public class OrderListAdapter extends BaseAdapter {
                             intent.putExtra("Position",position);
                             _convertView.getContext().startActivity(intent);
                             break;
-
                     }
+                    set_state(holder);
                 }
             });
         }
@@ -145,6 +163,18 @@ public class OrderListAdapter extends BaseAdapter {
         Utils.getInstance().setListViewHeightBasedOnChildren(holder.lv_content);
 
         return convertView;
+    }
+    public void set_state(ViewHolder holder){
+        switch (holder.state){
+            case MAKING:
+                holder.ly_order_state.setBackground(new ColorDrawable(0xFFF5A623));
+                holder.tv_order_state.setText("제조중");
+                break;
+            case DONE:
+                holder.ly_order_state.setBackground(new ColorDrawable(0xFF417505));
+                holder.tv_order_state.setText("제조완료");
+                break;
+        }
     }
 
     public ArrayList<Order> getListViewItemList()
@@ -163,6 +193,4 @@ public class OrderListAdapter extends BaseAdapter {
         private LinearLayout ly_order_state;
         private OrderState state;
     }
-
-
 }

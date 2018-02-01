@@ -16,6 +16,7 @@ public class Order{
     public String orderer_username;
     public List<Beverage> beverages;
     public OrderInItemListAdapter adapter;
+    public int state;
 
     public Order()
     {
@@ -87,4 +88,5 @@ public class Order{
     public void setBeverages(List<Beverage> beverages) {
         this.beverages = beverages;
     }
+    public int getState(){ return state; }
 }
