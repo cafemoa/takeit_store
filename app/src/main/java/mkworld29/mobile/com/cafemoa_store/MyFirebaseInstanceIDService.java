@@ -60,6 +60,6 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
     private void sendRegistrationToServer(String token) {
         // TODO: Implement this method to send token to your app server.
         Log.d("MyFirebaseInstance",token);
-//        sp.put("FCM_TOKEN", token);
+        sp.put("FCM_TOKEN", token);
     }
 }
