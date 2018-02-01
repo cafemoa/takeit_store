@@ -252,6 +252,7 @@ public class MainActivity extends AppCompatActivity
                 if(position != -1) {
                     adapter.remove(position);
                     adapter.notifyDataSetChanged();
+                    Log.d("TAG","되나안되나보자");
                     // DB Manager
                     //data.getStringExtra("Item")
 
