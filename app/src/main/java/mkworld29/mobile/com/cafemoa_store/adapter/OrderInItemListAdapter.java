@@ -59,7 +59,7 @@ public class OrderInItemListAdapter extends BaseAdapter {
 
         if(convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.item_order_list2, parent, false);
+            convertView = inflater.inflate(R.layout.item_order_in_item_list, parent, false);
 
 
             holder = new ViewHolder();
@@ -89,6 +89,8 @@ public class OrderInItemListAdapter extends BaseAdapter {
             holder.tv_amount.setText(str_amount);
         }
 
+        Log.d("TAGTAG!!!!!!",String.valueOf(this.listViewItemList.size()));
+
         return convertView;
     }
 
@@ -106,6 +108,7 @@ public class OrderInItemListAdapter extends BaseAdapter {
 
     // 아이템 데이터 추가를 위한 함수. 개발자가 원하는대로 작성 가능.
     public void addItem(Beverage bev){
+        listViewItemList.add(bev);
     }
 
 

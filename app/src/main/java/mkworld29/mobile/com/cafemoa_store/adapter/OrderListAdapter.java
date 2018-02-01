@@ -2,6 +2,7 @@ package mkworld29.mobile.com.cafemoa_store.adapter;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -22,12 +23,17 @@ import android.widget.Toast;
 
 import com.chauthai.swipereveallayout.SwipeRevealLayout;
 import com.chauthai.swipereveallayout.ViewBinderHelper;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
+import mkworld29.mobile.com.cafemoa_store.DeleteDialog;
 import mkworld29.mobile.com.cafemoa_store.Entity.Order;
 import mkworld29.mobile.com.cafemoa_store.Entity.OrderState;
+import mkworld29.mobile.com.cafemoa_store.Entity.StoredOrder;
 import mkworld29.mobile.com.cafemoa_store.R;
+import mkworld29.mobile.com.cafemoa_store.Utils;
+import mkworld29.mobile.com.cafemoa_store.etc.DBManager;
 import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitConnection;
 import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitInstance;
 import okhttp3.ResponseBody;
@@ -112,20 +118,31 @@ public class OrderListAdapter extends BaseAdapter {
                             holder.state = OrderState.ING;
                             holder.ly_order_state.setBackground(new ColorDrawable(0xFFF5A623));
                             holder.tv_order_state.setText("제조중");
+                            break;
 
                         case ING:
                             holder.state = OrderState.AFTER;
                             holder.ly_order_state.setBackground(new ColorDrawable(0xFF417505));
                             holder.tv_order_state.setText("제조완료");
+                            break;
 
                         case AFTER:
                             // Remove Code
+                            Intent intent = new Intent(_convertView.getContext(), DeleteDialog.class);
+                            StoredOrder so = new StoredOrder(item.pk, item.order_time, item.order_num, item.payment_type, item.orderer_username, item.beverages);
+                            Gson gson = new Gson();
+                            String s = gson.toJson(so);
+                            intent.putExtra("Item",s);
+                            intent.putExtra("Position",position);
+                            _convertView.getContext().startActivity(intent);
+                            break;
 
                     }
                 }
             });
-
         }
+
+        Utils.getInstance().setListViewHeightBasedOnChildren(holder.lv_content);
 
         return convertView;
     }
@@ -139,7 +156,6 @@ public class OrderListAdapter extends BaseAdapter {
     {
         listViewItemList.add(item);
     }
-
 
     private class ViewHolder {
         private TextView tv_number, tv_order_state;

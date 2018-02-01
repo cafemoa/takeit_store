@@ -1,4 +1,5 @@
 package mkworld29.mobile.com.cafemoa_store;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
@@ -14,7 +15,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -26,11 +29,15 @@ import java.util.TimerTask;
 
 import mkworld29.mobile.com.cafemoa_store.Entity.Beverage;
 import mkworld29.mobile.com.cafemoa_store.Entity.Order;
+import mkworld29.mobile.com.cafemoa_store.Entity.StoredOrder;
 import mkworld29.mobile.com.cafemoa_store.adapter.OrderInItemListAdapter;
 import mkworld29.mobile.com.cafemoa_store.adapter.OrderListAdapter;
 import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitConnection;
 import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitInstance;
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
+import okhttp3.internal.Util;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -65,8 +72,7 @@ public class MainActivity extends AppCompatActivity
 
         lv_order = (ListView) findViewById(R.id.lv_order);
 
-
-
+        Utils.getInstance().setListViewHeightBasedOnChildren(lv_order);
     }
 
     @Override
@@ -141,7 +147,6 @@ public class MainActivity extends AppCompatActivity
                         order.adapter = new OrderInItemListAdapter();
 
                         List<Beverage> beverages=order.getBeverages();
-                        int beverage_num=beverages.size();
 
                         adapter.addItem(order);
 
@@ -154,7 +159,6 @@ public class MainActivity extends AppCompatActivity
                         Log.d("MainActivty TAG", "Order Fin" + order.getOrder_num());
                     }
                     lv_order.setAdapter(adapter);
-
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "통신 에러 발생", Toast.LENGTH_SHORT).show();
@@ -238,6 +242,26 @@ public class MainActivity extends AppCompatActivity
 
 
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+
+        if (requestCode == 0) {
+            if(resultCode == Activity.RESULT_OK){
+                int position = data.getIntExtra("Position",-1);
+                if(position != -1) {
+                    adapter.remove(position);
+                    adapter.notifyDataSetChanged();
+                    // DB Manager
+                    //data.getStringExtra("Item")
+
+                }
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+            }
+        }
+
+    }
 
     private Boolean isNetWork(){
         ConnectivityManager manager = (ConnectivityManager) getSystemService (Context.CONNECTIVITY_SERVICE);
@@ -257,6 +281,30 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
+    }
+
+
+    public static void setListViewHeightBasedOnChildren(ListView listView) {
+        ListAdapter listAdapter = listView.getAdapter();
+        if (listAdapter == null) {
+            // pre-condition
+            return;
+        }
+
+        int totalHeight = 0;
+
+        int desiredWidth = View.MeasureSpec.makeMeasureSpec(listView.getWidth(), View.MeasureSpec.AT_MOST);
+        for (int i = 0; i < listAdapter.getCount(); i++) {
+            View listItem = listAdapter.getView(i, null, listView);
+            //listItem.measure(0, 0);
+            listItem.measure(desiredWidth, View.MeasureSpec.UNSPECIFIED);
+            totalHeight += listItem.getMeasuredHeight();
+        }
+        ViewGroup.LayoutParams params = listView.getLayoutParams();
+
+        params.height = totalHeight;
+        listView.setLayoutParams(params);
+        listView.requestLayout();
     }
 
 

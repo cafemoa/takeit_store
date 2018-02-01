@@ -1,24 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
     android:orientation="vertical">
 
 
     <LinearLayout
+        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_gravity="center"
         android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="주문번호 4"
+            android:text="주문번호"
             android:textColor="#24253d"
             android:textSize="15sp" />
+
         <TextView
+            android:id="@+id/tv_order_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#24253d"
+            android:text="000"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_order_content"
+            android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
@@ -42,20 +61,22 @@
         android:text="삭제하시겠습니까?" />
 
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:orientation="horizontal"
+        android:weightSum="2"
+        android:gravity="center"
         >
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/order_delete_okay"
-            android:layout_marginLeft="75dp"
-
-            android:gravity="left"
+            android:id="@+id/tv_order_delete_ok"
+            android:layout_weight="1"
+            android:gravity="center"
             android:text="확인"
             android:textColor="#ef4136"
             android:textSize="20sp" />
@@ -63,16 +84,14 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/order_delete_cancel"
-
-
-            android:layout_marginRight="75dp"
-            android:gravity="right"
+            android:id="@+id/tv_order_delete_cancel"
+            android:layout_weight="1"
+            android:gravity="center"
             android:text="취소"
             android:textColor="#24253d"
             android:textSize="20sp" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
 
 
