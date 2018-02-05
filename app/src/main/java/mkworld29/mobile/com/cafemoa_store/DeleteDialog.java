@@ -33,6 +33,7 @@ public class DeleteDialog extends Activity implements View.OnClickListener{
     private String id;
     private int position;
     private StoredOrder item;
+    private Intent _intent;
     private TextView tv_order_number, tv_order_content, tv_order_delete_cancel, tv_order_delete_ok;
 
     @Override
@@ -43,6 +44,7 @@ public class DeleteDialog extends Activity implements View.OnClickListener{
         setContentView(R.layout.dialog_bottom);
 
         Intent intent = getIntent();
+        _intent = intent;
 
         if(intent != null)
         {
@@ -76,10 +78,15 @@ public class DeleteDialog extends Activity implements View.OnClickListener{
     public void onClick(View v) {
         if(v.getId() == tv_order_delete_ok.getId())
         {
-            Intent returnIntent = new Intent();
-            returnIntent.putExtra("Position", position);
-            returnIntent.putExtra("Item", Utils.getInstance().OrderToString(item));
-            setResult(Activity.RESULT_OK,returnIntent);
+            Intent result = _intent;
+//            if (result == null)
+//                result = new Intent();
+
+
+            result.putExtra("Position", position);
+            result.putExtra("Item", Utils.getInstance().OrderToString(item));
+
+            setResult(Activity.RESULT_OK,result);
 
             Retrofit retrofit = RetrofitInstance.getInstance(getApplicationContext());
             RetrofitConnection.order_end end_service = retrofit.create(RetrofitConnection.order_end.class);

@@ -40,7 +40,6 @@ public class Utils {
         ListAdapter listAdapter = listView.getAdapter();
         if (listAdapter == null) {
             // pre-condition
-            Log.d("TAG!TAG!!!!","RETURN!!!!");
             return;
         }
 
