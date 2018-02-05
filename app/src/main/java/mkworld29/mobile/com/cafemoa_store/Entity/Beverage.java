@@ -13,7 +13,6 @@ public class Beverage{
     public String beverage_name;
     public List<Selection> options;
 
-
     public Beverage()
     {
         this(0,0,0,null);
