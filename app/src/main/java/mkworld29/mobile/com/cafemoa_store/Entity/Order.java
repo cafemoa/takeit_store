@@ -18,6 +18,7 @@ public class Order{
     public OrderInItemListAdapter adapter;
     public int state;
 
+
     public Order()
     {
 
