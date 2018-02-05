@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private ListView lv_order = null;
+    public static Activity mInstance;
     OrderListAdapter adapter = null;
     Retrofit retrofit;
 
@@ -73,6 +74,8 @@ public class MainActivity extends AppCompatActivity
         lv_order = (ListView) findViewById(R.id.lv_order);
 
         Utils.getInstance().setListViewHeightBasedOnChildren(lv_order);
+
+        mInstance = this;
     }
 
     @Override
@@ -243,8 +246,10 @@ public class MainActivity extends AppCompatActivity
 
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        Log.d("TAG","되나안되나보자444");
+        if(adapter != null)
+            adapter.onActivityResult(requestCode,resultCode,data);
 
         if (requestCode == 0) {
             if(resultCode == Activity.RESULT_OK){
@@ -261,7 +266,14 @@ public class MainActivity extends AppCompatActivity
             if (resultCode == Activity.RESULT_CANCELED) {
             }
         }
-
+        else if(requestCode == -1)
+        {
+            Log.d("TAG","되나안되나보자222");
+        }
+        else
+        {
+            Log.d("TAG","되나안되나보자");
+        }
     }
 
     private Boolean isNetWork(){

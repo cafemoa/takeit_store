@@ -1,5 +1,6 @@
 package mkworld29.mobile.com.cafemoa_store.adapter;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -152,7 +153,7 @@ public class OrderListAdapter extends BaseAdapter {
                             String s = gson.toJson(so);
                             intent.putExtra("Item",s);
                             intent.putExtra("Position",position);
-                            _convertView.getContext().startActivity(intent);
+                           _convertView.getContext().startActivity(intent);
                             break;
                     }
                     set_state(holder);
@@ -175,6 +176,11 @@ public class OrderListAdapter extends BaseAdapter {
                 holder.tv_order_state.setText("제조완료");
                 break;
         }
+    }
+
+    public  void onActivityResult(int requestCode, int resultCode, Intent data) {
+        Log.d("MyAdapter", "onActivityResult");
+        Log.d("TAG","되나안되나보자7777777");
     }
 
     public ArrayList<Order> getListViewItemList()
