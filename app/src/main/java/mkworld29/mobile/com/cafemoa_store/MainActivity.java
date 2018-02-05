@@ -233,6 +233,10 @@ public class MainActivity extends AppCompatActivity
             });
         } else if (id == R.id.nav_help) {
 
+        } else if(id==R.id.nav_receipt){
+            Intent intent=new Intent(MainActivity.this,ReceiptActivity.class);
+            startActivity(intent);
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
