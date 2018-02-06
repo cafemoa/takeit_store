@@ -23,6 +23,7 @@ import java.util.ArrayList;
 
 import mkworld29.mobile.com.cafemoa_store.Entity.Beverage;
 import mkworld29.mobile.com.cafemoa_store.Entity.Order;
+import mkworld29.mobile.com.cafemoa_store.Entity.Selection;
 import mkworld29.mobile.com.cafemoa_store.R;
 import mkworld29.mobile.com.cafemoa_store.item.OrderItem;
 import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitConnection;
@@ -78,10 +79,23 @@ public class OrderInItemListAdapter extends BaseAdapter {
 
         if(item!= null){
 
-            String str_content = "sibal";
-            String str_option="sibal";
-            String str_amount = String.valueOf(item.getAmount());
+            String str_content = item.beverage_name;
+            String str_option="";
+            int    amount = item.getAmount();
+            String str_amount = String.valueOf(amount);
 
+            if(amount >= 1)
+                holder.tv_isMulti.setVisibility(View.VISIBLE);
+            else
+                holder.tv_isMulti.setVisibility(View.GONE);
+
+            if(item.getShot_num()>=1) str_option += item.getShot_num() + "샷 / ";
+
+            for(Selection s : item.options)
+            {
+                if(s.getContent() != null)
+                    str_option += s.getContent();
+            }
 
             holder.tv_content.setText(str_content);
             holder.tv_option.setText(str_option);

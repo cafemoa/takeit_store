@@ -17,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.AbsListView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -162,6 +163,8 @@ public class MainActivity extends AppCompatActivity
                         Log.d("MainActivty TAG", "Order Fin" + order.getOrder_num());
                     }
                     lv_order.setAdapter(adapter);
+
+
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "통신 에러 발생", Toast.LENGTH_SHORT).show();
