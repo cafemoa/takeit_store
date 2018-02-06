@@ -59,7 +59,7 @@ public class ReceiptInItemListAdapter extends BaseAdapter {
 
         if(convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.item_order_in_item_list, parent, false);
+            convertView = inflater.inflate(R.layout.item_receipt_in_item_list, parent, false);
 
 
             holder = new ViewHolder();
