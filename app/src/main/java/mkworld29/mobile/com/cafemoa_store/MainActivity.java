@@ -260,6 +260,7 @@ public class MainActivity extends AppCompatActivity
 
         if (requestCode == 0) {
             if(resultCode == Activity.RESULT_OK){
+
                 int position = data.getIntExtra("Position",-1);
                 if(position != -1) {
                     adapter.remove(position);
