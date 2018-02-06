@@ -3,6 +3,8 @@ package mkworld29.mobile.com.cafemoa_store.Entity;
 import java.util.List;
 
 import mkworld29.mobile.com.cafemoa_store.adapter.OrderInItemListAdapter;
+import mkworld29.mobile.com.cafemoa_store.adapter.ReceiptInItemListAdapter;
+import mkworld29.mobile.com.cafemoa_store.adapter.ReceiptListAdapter;
 
 /**
  * Created by ABCla on 2018-01-22.
@@ -16,6 +18,8 @@ public class Order{
     public String orderer_username;
     public List<Beverage> beverages;
     public OrderInItemListAdapter adapter;
+    public ReceiptInItemListAdapter receiptInItemListAdapter;
+
     public int state;
 
 
@@ -23,6 +27,8 @@ public class Order{
     {
 
     }
+
+
 
     public Order(int pk, String order_time, int order_num, int payment_type, String orderer_username, List<Beverage> beverages, OrderInItemListAdapter adapter) {
         this.pk = pk;
@@ -32,6 +38,15 @@ public class Order{
         this.orderer_username = orderer_username;
         this.beverages = beverages;
         this.adapter = adapter;
+    }
+
+    public Order(StoredOrder storedOrder){
+        this.pk=storedOrder.pk;
+        this.order_time=storedOrder.order_time;
+        this.order_num=storedOrder.order_num;
+        this.payment_type=storedOrder.payment_type;
+        this.orderer_username=storedOrder.orderer_username;
+        this.beverages=storedOrder.beverages;
     }
 
     public OrderInItemListAdapter getAdapter() {
