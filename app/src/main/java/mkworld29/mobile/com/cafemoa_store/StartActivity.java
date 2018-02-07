@@ -37,17 +37,20 @@ public class StartActivity extends AppCompatActivity {
         repos.enqueue(new Callback<RetrofitConnection.Cafe>() {
             @Override
             public void onResponse(Call<RetrofitConnection.Cafe> call, Response<RetrofitConnection.Cafe> response) {
-                if (response.code() == 200) {
+                if (response.code() == 200)
+                {
                     RetrofitConnection.Cafe cafe=response.body();
                     final Intent intent = new Intent(StartActivity.this, MainActivity.class);
 
                     intent.putExtra("MinTime", cafe.min_time);
 
-                    if(cafe.is_open){
+                    if(cafe.is_open)
+                    {
                         startActivity(intent);
                         finish();
                     }
-                    else{
+                    else
+                    {
                         tv_start = (TextView) findViewById(R.id.btn_start);
                         tv_start.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -62,7 +65,7 @@ public class StartActivity extends AppCompatActivity {
                                             finish();
                                         }
                                         else{
-                                            Toast.makeText(getApplicationContext(), "통신 에러 발생", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(getApplicationContext(), "(Start1) 통신 에러 발생", Toast.LENGTH_SHORT).show();
                                         }
                                     }
 
@@ -76,8 +79,13 @@ public class StartActivity extends AppCompatActivity {
                         });
                     }
                 }
-                else{
-                    Toast.makeText(getApplicationContext(), "통신 에러 발생", Toast.LENGTH_SHORT).show();
+                else
+                {
+                    Toast.makeText(getApplicationContext(), "(Start2) 통신 에러 발생", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(StartActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+
                 }
             }
 

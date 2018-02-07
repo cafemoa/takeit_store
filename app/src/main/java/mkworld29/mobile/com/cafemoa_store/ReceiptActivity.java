@@ -20,6 +20,7 @@ import java.util.List;
 import mkworld29.mobile.com.cafemoa_store.Entity.Beverage;
 import mkworld29.mobile.com.cafemoa_store.Entity.Order;
 import mkworld29.mobile.com.cafemoa_store.Entity.StoredOrder;
+import mkworld29.mobile.com.cafemoa_store.adapter.OrderInItemListAdapter;
 import mkworld29.mobile.com.cafemoa_store.adapter.ReceiptInItemListAdapter;
 import mkworld29.mobile.com.cafemoa_store.adapter.ReceiptListAdapter;
 import mkworld29.mobile.com.cafemoa_store.etc.DBManager;
@@ -33,7 +34,6 @@ public class ReceiptActivity extends AppCompatActivity {
     private ListView listView;
     private ImageView iv_back;
 
-    private ArrayList<Order> receiptList;
 
     ReceiptListAdapter receiptListAdapter=null;
 
@@ -48,10 +48,7 @@ public class ReceiptActivity extends AppCompatActivity {
 
         lv_receipt=(ListView) findViewById(R.id.lv_receipt_list);
 
-        DBManager.getInstance().initHelper(getApplicationContext());
-
         ArrayList<String> list = DBManager.getInstance().getReceiptList();
-        receiptList = new ArrayList<Order>();
 
         receiptListAdapter=new ReceiptListAdapter();
 
@@ -60,18 +57,14 @@ public class ReceiptActivity extends AppCompatActivity {
 
             order.receiptInItemListAdapter=new ReceiptInItemListAdapter();
 
-            receiptList.add(order);
-
-
-            List<Beverage> beverages = receiptList.get(i).getBeverages();
-
-
-            receiptListAdapter.addItem(order);
+            List<Beverage> beverages = order.getBeverages();
 
             for (Beverage bev : beverages) {
                 Log.d("MainActivity TAG", bev.beverage_name);
-                receiptList.get(i).receiptInItemListAdapter.addItem(bev);
+                order.receiptInItemListAdapter.addItem(bev);
             }
+            receiptListAdapter.addItem(order);
+
         }
         lv_receipt.setAdapter(receiptListAdapter);
 

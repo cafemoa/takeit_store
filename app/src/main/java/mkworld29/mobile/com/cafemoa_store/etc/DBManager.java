@@ -104,10 +104,12 @@ public class DBManager {
 
         result.moveToFirst();
         while (!result.isAfterLast()){
-            String item = result.getString(1);
+            String item = result.getString(0);
             receiptList.add(item);
+
             result.moveToNext();
         }
+
 
         result.close();
         return receiptList;

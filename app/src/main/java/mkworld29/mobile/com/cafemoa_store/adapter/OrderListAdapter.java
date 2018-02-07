@@ -81,25 +81,38 @@ public class OrderListAdapter extends BaseAdapter {
     public View getView(final int position, View convertView, final ViewGroup parent) {
         final Context context = parent.getContext();
         final View _convertView;
-        final ViewHolder holder;
+        ViewHolder holder;
         final Order item = (Order) getItem(position);
 
         if(convertView == null) {
-            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.item_order_list2, parent, false);
-
-            holder = new ViewHolder();
-
-            holder.tv_number            =   (TextView)convertView.findViewById(R.id.tv_order_number);
-            holder.ly_order_state       =   (LinearLayout) convertView.findViewById(R.id.ly_order_state);
-            holder.lv_content           =   (ListView)  convertView.findViewById(R.id.lv_content);
-            holder.tv_order_state       =   (TextView) convertView.findViewById(R.id.tv_order_state);
-            holder.state                =   OrderState.values()[item.getState()];
-            set_state(holder);
-            convertView.setTag(holder);
+//            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//            convertView = inflater.inflate(R.layout.item_order_list2, parent, false);
+//
+//            holder = new ViewHolder();
+//
+//            holder.tv_number            =   (TextView)convertView.findViewById(R.id.tv_order_number);
+//            holder.ly_order_state       =   (LinearLayout) convertView.findViewById(R.id.ly_order_state);
+//            holder.lv_content           =   (ListView)  convertView.findViewById(R.id.lv_content);
+//            holder.tv_order_state       =   (TextView) convertView.findViewById(R.id.tv_order_state);
+//            holder.state                =   OrderState.values()[item.getState()];
+//            set_state(holder);
+//            convertView.setTag(holder);
         }else{
             holder = (ViewHolder) convertView.getTag();
         }
+
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        convertView = inflater.inflate(R.layout.item_order_list2, parent, false);
+
+        holder = new ViewHolder();
+
+        holder.tv_number            =   (TextView)convertView.findViewById(R.id.tv_order_number);
+        holder.ly_order_state       =   (LinearLayout) convertView.findViewById(R.id.ly_order_state);
+        holder.lv_content           =   (ListView)  convertView.findViewById(R.id.lv_content);
+        holder.tv_order_state       =   (TextView) convertView.findViewById(R.id.tv_order_state);
+        holder.state                =   OrderState.values()[item.getState()];
+        set_state(holder);
+        convertView.setTag(holder);
 
         _convertView = convertView;
 

@@ -85,12 +85,11 @@ public class ReceiptListAdapter extends BaseAdapter {
 
         if(convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.item_order_list2, parent, false);
+            convertView = inflater.inflate(R.layout.item_receipt_list, parent, false);
 
             holder = new ViewHolder();
 
             holder.tv_number            =   (TextView)convertView.findViewById(R.id.tv_order_number);
-            holder.ly_order_state       =   (LinearLayout) convertView.findViewById(R.id.ly_order_state);
             holder.lv_content           =   (ListView)  convertView.findViewById(R.id.lv_content);
 
             convertView.setTag(holder);
@@ -100,9 +99,11 @@ public class ReceiptListAdapter extends BaseAdapter {
 
         _convertView = convertView;
 
+
         if(item!= null){
-            holder.lv_content.setAdapter(item.getAdapter());
+            holder.lv_content.setAdapter(item.receiptInItemListAdapter);
             holder.tv_number.setText(String.valueOf(listViewItemList.get(position).getOrder_num()));
+
         }
 
         Utils.getInstance().setListViewHeightBasedOnChildren(holder.lv_content);

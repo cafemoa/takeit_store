@@ -33,6 +33,7 @@ import mkworld29.mobile.com.cafemoa_store.Entity.Order;
 import mkworld29.mobile.com.cafemoa_store.Entity.StoredOrder;
 import mkworld29.mobile.com.cafemoa_store.adapter.OrderInItemListAdapter;
 import mkworld29.mobile.com.cafemoa_store.adapter.OrderListAdapter;
+import mkworld29.mobile.com.cafemoa_store.etc.DBManager;
 import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitConnection;
 import mkworld29.mobile.com.cafemoa_store.retrofit.RetrofitInstance;
 import okhttp3.MediaType;
@@ -76,6 +77,9 @@ public class MainActivity extends AppCompatActivity
 
         Utils.getInstance().setListViewHeightBasedOnChildren(lv_order);
 
+
+        DBManager.getInstance().initHelper(getApplicationContext());
+        
         mInstance = this;
     }
 
@@ -167,7 +171,7 @@ public class MainActivity extends AppCompatActivity
 
                 }
                 else{
-                    Toast.makeText(getApplicationContext(), "통신 에러 발생", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "(Main1) 통신 에러 발생", Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -228,7 +232,7 @@ public class MainActivity extends AppCompatActivity
                         finish();
                     }
                     else{
-                        Toast.makeText(getApplicationContext(), "통신 에러 발생", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "(Main2) 통신 에러 발생", Toast.LENGTH_SHORT).show();
                     }
                 }
 
@@ -242,7 +246,6 @@ public class MainActivity extends AppCompatActivity
         } else if(id==R.id.nav_receipt){
             Intent intent=new Intent(MainActivity.this,ReceiptActivity.class);
             startActivity(intent);
-            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -262,10 +265,13 @@ public class MainActivity extends AppCompatActivity
             if(resultCode == Activity.RESULT_OK){
 
                 int position = data.getIntExtra("Position",-1);
+
                 if(position != -1) {
                     adapter.remove(position);
                     adapter.notifyDataSetChanged();
                     Log.d("TAG","되나안되나보자");
+
+                    DBManager.getInstance().insert(data.getStringExtra("Item"));
                     // DB Manager
                     //data.getStringExtra("Item")
 

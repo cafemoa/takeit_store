@@ -52,6 +52,14 @@ public class MyFirebaseMessagingService extends com.google.firebase.messaging.Fi
             Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
         }
 
+        /**
+         *
+         * (에스프레소가 주문됨 : 3번)
+         *  제조중 : 1
+         *  제조완료 : 2
+         */
+
+        remoteMessage.getData().get("code");
         msg = remoteMessage.getData().get("message");
 
 
