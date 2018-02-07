@@ -33,6 +33,7 @@ import mkworld29.mobile.com.cafemoa_store.DeleteDialog;
 import mkworld29.mobile.com.cafemoa_store.Entity.Order;
 import mkworld29.mobile.com.cafemoa_store.Entity.OrderState;
 import mkworld29.mobile.com.cafemoa_store.Entity.StoredOrder;
+import mkworld29.mobile.com.cafemoa_store.MainActivity;
 import mkworld29.mobile.com.cafemoa_store.R;
 import mkworld29.mobile.com.cafemoa_store.Utils;
 import mkworld29.mobile.com.cafemoa_store.etc.DBManager;
@@ -153,7 +154,7 @@ public class OrderListAdapter extends BaseAdapter {
                             String s = gson.toJson(so);
                             intent.putExtra("Item",s);
                             intent.putExtra("Position",position);
-                           _convertView.getContext().startActivity(intent);
+                            ((MainActivity)_convertView.getContext()).startActivityForResult(intent,0);
                             break;
                     }
                     set_state(holder);
