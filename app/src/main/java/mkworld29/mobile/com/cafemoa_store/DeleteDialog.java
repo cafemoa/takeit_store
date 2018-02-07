@@ -87,7 +87,6 @@ public class DeleteDialog extends Activity implements View.OnClickListener{
             result.putExtra("Item", Utils.getInstance().OrderToString(item));
 
             setResult(Activity.RESULT_OK,result);
-            setResult(Activity.RESULT_OK);
 
             Retrofit retrofit = RetrofitInstance.getInstance(getApplicationContext());
             RetrofitConnection.order_end end_service = retrofit.create(RetrofitConnection.order_end.class);
